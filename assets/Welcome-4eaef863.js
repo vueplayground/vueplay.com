@@ -1,1 +1,0 @@
-import{_ as o,o as e,c as t}from"./index-f8b8d242.js";const c={},n={style:{margin:"auto","font-weight":"bold","font-size":"25px",color:"navy"}};function s(r,a,_,l,i,p){return e(),t("div",n," Welcome to VuePlayground! ")}const f=o(c,[["render",s]]);export{f as default};

@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
         let redirect = sessionStorage.redirect
         delete sessionStorage.redirect
-        if (redirect && redirect != location.href) {
+        if (redirect && redirect !== location.href) {
             history.replaceState(null, null, redirect)
         }
     </script>

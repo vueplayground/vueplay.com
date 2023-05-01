@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341 341" width="512" height="512">
+	<title>logo</title>
+	<style>
+		.s0 { fill: #0c181a } 
+		.s1 { fill: #4c9ca7 } 
+		.s2 { fill: #428891 } 
+		.s3 { fill: #2b565d } 
+	</style>
+	<g id="Layer 1">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Path&gt;" class="s0" d="m339.9 171h-170.5v-169.2" />
+			<path id="&lt;Path&gt;" class="s1" d="m2.2 170h169.4v169.2" />
+		</g>
+	</g>
+	<g id="Layer 1 copy 2">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Path&gt;" class="s2" d="m170.3 2.2v168.5h-168.2" />
+			<path id="&lt;Path&gt;" class="s3" d="m170.3 338.9v-168.4h169.2" />
+		</g>
+	</g>
+</svg>

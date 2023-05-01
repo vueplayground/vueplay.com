@@ -1,7 +1,0 @@
-{
-    "name": "vueplayground",
-    "description": "A frontend application built with https://vueplayground.com",
-    "repository": "https://github.com/owner/repo",
-    "logo": "https://node-js-sample.herokuapp.com/node.png",
-    "keywords": ["node", "express", "static", "vueplayground"]
-}

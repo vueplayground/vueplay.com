@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="Design Vue files with a drag & drop template builder. Use playground to create your new web app." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="https://vueplayground.com/screenshot.png" />
+    <meta property="og:image" content="https://www.vueplay.com/screenshot.png" />
     <meta property="og:title" content="Vue Playground" />
     <meta property="og:description" content="Design Vue files with a drag & drop template builder. Use playground to create your new web app." />
     <meta property="og:image:width" content="1550" />
@@ -18,7 +18,7 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://vueplayground.com">
+    <link rel="canonical" href="https://vueplay.com">
     <link rel="icon shortcut" type="image/x-icon" href="favicon.ico">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q48VZK3Y3Y"></script>
@@ -43,17 +43,20 @@
     <script>
         window.fbAsyncInit = function() {
             FB.init({
-            appId      : '818899829451376',
-            xfbml      : true,
-            version    : 'v17.0'
+                appId: '818899829451376',
+                xfbml: true,
+                version: 'v17.0'
             });
             FB.AppEvents.logPageView();
         };
 
-        (function(d, s, id){
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "https://connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));

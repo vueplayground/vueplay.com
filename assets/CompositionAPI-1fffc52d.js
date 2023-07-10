@@ -1,4 +1,4 @@
-import{_ as t,o,c as e,e as s}from"./index-26b05b5d.js";const n={data:()=>({})},p={class:"p-6 pt-20 md:pt-6 pb-40"},a=s(`<article class="max-w-2xl mx-auto mb-6 mt-4"><h1 class="mb-6 text-4xl"> Composition API </h1><p style="margin-top:15px;" class="py-2 text-lg font-medium"> Vue Play does currently only support the Vue Options API. </p><p style="margin-top:15px;" class="text-lg"> To use the Composition API within Vue Play, wrap your code inside the setup hook in the options API: </p><pre style="margin-top:15px;" class="text-lg"><code>
+import{_ as t,o,c as e,e as s}from"./index-fe7d3354.js";const n={data:()=>({})},p={class:"p-6 pt-20 md:pt-6 pb-40"},a=s(`<article class="max-w-2xl mx-auto mb-6 mt-4"><h1 class="mb-6 text-4xl"> Composition API </h1><p style="margin-top:15px;" class="py-2 text-lg font-medium"> Vue Play does currently only support the Vue Options API. </p><p style="margin-top:15px;" class="text-lg"> To use the Composition API within Vue Play, wrap your code inside the setup hook in the options API: </p><pre style="margin-top:15px;" class="text-lg"><code>
 &lt;script&gt;
 import { ref } from &#39;vue&#39;
 export default() {

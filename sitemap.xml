@@ -102,4 +102,10 @@
         <changefreq>Daily</changefreq>
         <priority>1</priority>
 	</url>
+	<url>
+		<loc>https://vueplay.com/search</loc>
+		<lastmod>2023-07-31T09:36:36+09:00</lastmod>
+        <changefreq>Daily</changefreq>
+        <priority>1</priority>
+	</url>
 </urlset>

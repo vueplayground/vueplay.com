@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #10a37cff;
+  --color-secondary: #17e8c2ff;
+  --color-warning: #de601dff;
+  --color-danger: #e62020ff;
+  --color-success: #36e01fff;
+  --color-info: #00a6ffff;
+  --color-neutral: #8fa8bdff;
+  --color-transparent: #8fa8bd4d;
+  --image-home-svg: url(@/_templates/arctic/assets/home.svg);
+  --image-home-light-svg: url(@/_templates/arctic/assets/home-light.svg);
+  --image-menu-dark-svg: url(@/_templates/arctic/assets/menu-dark.svg);
+  --image-menu-light-svg: url(@/_templates/arctic/assets/menu-light.svg);
+  --image-submenu-light-svg: url(@/_templates/arctic/assets/submenu-light.svg);
+  --image-submenu-dark-svg: url(@/_templates/arctic/assets/submenu-dark.svg);
+  --image-google-svg: url(@/assets/google.svg);
+  --image-facebook-svg: url(@/assets/facebook.svg);
+  --image-play-svg: url(@/assets/play.svg);
+  --image-rocket-white-svg: url(@/assets/rocket-white.svg);
+  --image-goods-black-svg: url(@/assets/icons/goods-black.svg);
+  --image-goods-white-svg: url(@/assets/icons/goods-white.svg);
+  --image-star-black-svg: url(@/assets/icons/star-black.svg);
+  --image-star-white-svg: url(@/assets/icons/star-white.svg);
+  --image-label-white-svg: url(@/assets/icons/label-white.svg);
+  --image-label-black-svg: url(@/assets/icons/label-black.svg);
+  --image-github-black-svg: url(@/assets/icons/github-black.svg);
+  --image-github-white-svg: url(@/assets/icons/github-white.svg);
+}

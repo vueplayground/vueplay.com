@@ -337,12 +337,11 @@
 							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
 							padding="{`default`:{`xs`:{`light`:`0px`}}}"
 						><a
-								href="https://www.producthunt.com/p/vueplay"
+								href="https://www.producthunt.com/products/vueplay?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-vue&#0045;play&#0045;2"
 								target="_blank"
-							>
-								<img
-									src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=392346&theme=light"
-									alt="Vue&#0032;Playground - Visual&#0032;drag&#0032;and&#0032;drop&#0032;builder&#0032;for&#0032;vue&#0032;components&#0032;and&#0032;apps | Product Hunt"
+							><img
+									src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=416946&theme=light&t=1752143504408"
+									alt="Vue&#0032;Play - Create&#0032;Vue&#0032;Applications&#0032;using&#0032;a&#0032;Visual&#0032;Designer | Product Hunt"
 									style="width: 250px; height: 54px;;margin:auto"
 									width="250"
 									height="54"

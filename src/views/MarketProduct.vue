@@ -867,7 +867,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 							style="width:100%;margin-bottom:20px;margin-top:0px"
 							fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 						>Share on social media</Title><a
-							href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/subpage"
+							:href="'https://www.facebook.com/sharer/sharer.php?u=https://vueplay.com/market/' + category + '/' + component?.slug"
 							target="_blank"
 						><svg
 								viewBox="0 0 24 24"
@@ -881,9 +881,8 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.791-4.668 4.533-4.668 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12"
 									fill="currentColor"
 								/>
-							</svg>
-						</a><a
-							href="https://www.reddit.com/submit?url=https://yourwebsite.com/subpage&title=Cool Stuff"
+							</svg> </a><a
+							:href="'https://www.reddit.com/submit?url=https://vueplay.com/market/' + category + '/' + component?.slug + '&title=' + component?.name"
 							target="_blank"
 						><svg
 								width="42"
@@ -894,9 +893,8 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									fill="currentColor"
 									d="M12.606 20.986a.408.408 0 0 0-.289.696 5.74 5.74 0 0 0 3.712 1.14h-.012a5.68 5.68 0 0 0 3.715-1.152l-.014.01a.45.45 0 0 0 .035-.58l.001.001a.41.41 0 0 0-.58 0 4.92 4.92 0 0 1-3.152.912l.013.001a4.9 4.9 0 0 1-3.154-.922l.014.01a.4.4 0 0 0-.287-.119h-.003zM19.436 16a1.562 1.562 0 1 0 1.562 1.561A1.564 1.564 0 0 0 19.436 16m-6.873 0a1.56 1.56 0 1 1-.001 3.121A1.56 1.56 0 0 1 12.563 16m9.698-9.067a1.55 1.55 0 1 1-1.56 1.635v-.004l-3.245-.684-1 4.682a10.8 10.8 0 0 1 5.878 1.884l-.037-.024c.38-.379.905-.614 1.485-.614h.025-.001A2.194 2.194 0 0 1 25.998 16a2.27 2.27 0 0 1-1.249 2.011l-.013.006c.033.191.052.412.052.637v.014-.001c0 3.367-3.911 6.086-8.752 6.086s-8.752-2.719-8.752-6.086v-.005q0-.351.057-.687l-.003.024a2.191 2.191 0 0 1 .893-4.192h.001a2.2 2.2 0 0 1 1.509.613l-.001-.001a10.55 10.55 0 0 1 5.924-1.858h.004l1.106-5.226a.43.43 0 0 1 .173-.245l.002-.001a.44.44 0 0 1 .3-.052h-.003l3.631.771a1.52 1.52 0 0 1 1.375-.876zM16 1.004C7.718 1.004 1.004 7.718 1.004 16S7.718 30.996 16 30.996 30.996 24.282 30.996 16c0-4.141-1.678-7.89-4.392-10.604A14.95 14.95 0 0 0 16 1.004"
 								/>
-							</svg>
-						</a><a
-							href="https://twitter.com/intent/tweet?url=https://yourwebsite.com/subpage&text=Check this out!"
+							</svg> </a><a
+							:href="'https://twitter.com/intent/tweet?url=https://vueplay.com/market/' + category + '/' + component?.slug + '&text=' + component?.name"
 							target="_blank"
 						><svg
 								width="38"
@@ -908,9 +906,8 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284zM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854z"
 									fill="currentColor"
 								/>
-							</svg>
-						</a><a
-							href="https://www.linkedin.com/shareArticle?mini=true&url=https://yourwebsite.com/subpage"
+							</svg> </a><a
+							:href="'https://www.linkedin.com/shareArticle?mini=true&url=https://vueplay.com/market/' + category + '/' + component?.slug"
 							target="_blank"
 						><svg
 								width="40"
@@ -924,8 +921,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									d="M22.286 0H1.709C.766 0 0 .777 0 1.73v20.54C0 23.223.766 24 1.709 24h20.577c.943 0 1.714-.777 1.714-1.73V1.73C24 .777 23.229 0 22.286 0M7.254 20.571H3.696V9.118H7.26V20.57zM5.475 7.554a2.063 2.063 0 0 1 0-4.125c1.136 0 2.063.926 2.063 2.062a2.06 2.06 0 0 1-2.063 2.063M20.587 20.57H17.03V15c0-1.329-.026-3.037-1.848-3.037-1.853 0-2.137 1.446-2.137 2.94v5.668H9.488V9.118H12.9v1.564h.048c.477-.9 1.64-1.848 3.37-1.848 3.6 0 4.27 2.373 4.27 5.459z"
 									fill="currentColor"
 								/>
-							</svg>
-						</a>
+							</svg> </a>
 					</Box>
 					<Link
 						backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`,`dark`:`color-mix(in oklch, var(--color-primary) 85%, black)`}},`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-primary) 85%, white)`,`dark`:`color-mix(in oklch, var(--color-primary) 95%, black)`}}}"

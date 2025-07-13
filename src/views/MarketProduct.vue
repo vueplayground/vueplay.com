@@ -1446,6 +1446,47 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			if (['http'].some(img => this.component?.icon?.startsWith(img))) {
 				imageUrl = this.component.icon;
 			}
+
+			let script = []
+			if (this.component?.price) {
+				const price = this.component.price / 100
+				script.push({
+					type: 'application/ld+json',
+					innerHTML: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "Product",
+						"name": this.component.title,
+						"description": this.component.description,
+						"image": imageUrl,
+						"provider": {
+							"@type": "Organization",
+							"name": "Vue Play",
+							"url": "https://vueplay.com",
+							"logo": "https://vueplay.com/assets/vueplay-logo-long-fVs74bGe.webp"
+						},
+						"offers": {
+							"@type": "Offer",
+							"name": "Professional Plan - Monthly Subscription",
+							"price": price,
+							"priceCurrency": "USD",
+							"availability": "https://schema.org/InStock",
+							"url": currentUrl
+						},
+						"areaServed": {
+							"@type": "Place",
+							"name": "Worldwide"
+						},
+						"category": "Software",
+						"termsOfService": "https://vueplay.com/terms-of-service",
+						"brand": {
+							"@type": "Brand",
+							"name": "Vue Play",
+							"url": "https://vueplay.com"
+						}
+					})
+				})
+			}
+
 			return {
 				title: title,
 				meta: [{
@@ -1493,7 +1534,8 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 					hid: 'canonical',
 					rel: 'canonical',
 					href: currentUrl
-				}]
+				}],
+				script
 			};
 		}
 	};

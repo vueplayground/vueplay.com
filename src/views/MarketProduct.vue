@@ -1019,8 +1019,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			modal: false,
 			copyDeepEvent: null,
 			displayCode: false,
-			displayAnalyze: false,
-			mountCount: 1
+			displayAnalyze: false
 		}),
 		async mounted() {
 			await this.init(this.component ? true : false);
@@ -1029,7 +1028,6 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			this.iframeModal = document.getElementById('modal');
 			this.iframeControls = document.getElementById('controls');
 			this.iframeSlots = document.getElementById('slots');
-			this.mountCount++;
 		},
 		async unmounted() {
 			window.removeEventListener('message', this.handleMessage);
@@ -1124,15 +1122,15 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}, '*');
 			},
 			async init(lazy = false) {
-				if (lazy && !this.mountCount) return await this.loadComponent();
+				if (lazy) return await this.loadComponent();
 				if (!this.version) {
 					await this.checkReadAccess();
-					if (!this.component || this.mountCount) await this.getComponent();
+					if (!this.component) await this.getComponent();
 					await this.loadComponent();
 				} else {
 					const sequenceA = (async () => {
 						await this.checkReadAccess();
-						if (!this.component || this.mountCount) await this.getComponent();
+						if (!this.component) await this.getComponent();
 					})();
 					const sequenceB = this.loadComponent();
 					await Promise.all([sequenceA, sequenceB]);

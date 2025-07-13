@@ -1023,6 +1023,10 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			enableLazy: false
 		}),
 		async mounted() {
+			if (!window.disableLazy) {
+				this.enableLazy = true;
+				window.disableLazy = true;
+			}
 			await this.init(this.component ? true : false);
 			window.addEventListener('message', this.handleMessage);
 			this.iframe = document.getElementById('playground');

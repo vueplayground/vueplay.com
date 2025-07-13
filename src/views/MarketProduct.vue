@@ -1019,7 +1019,8 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			modal: false,
 			copyDeepEvent: null,
 			displayCode: false,
-			displayAnalyze: false
+			displayAnalyze: false,
+			enableLazy: false
 		}),
 		async mounted() {
 			await this.init(this.component ? true : false);
@@ -1122,15 +1123,15 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}, '*');
 			},
 			async init(lazy = false) {
-				if (lazy) return await this.loadComponent();
+				if (lazy && this.enableLazy) return await this.loadComponent();
 				if (!this.version) {
 					await this.checkReadAccess();
-					if (!this.component) await this.getComponent();
+					if (!this.component && this.enableLazy) await this.getComponent();
 					await this.loadComponent();
 				} else {
 					const sequenceA = (async () => {
 						await this.checkReadAccess();
-						if (!this.component) await this.getComponent();
+						if (!this.component && this.enableLazy) await this.getComponent();
 					})();
 					const sequenceB = this.loadComponent();
 					await Promise.all([sequenceA, sequenceB]);

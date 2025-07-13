@@ -1308,17 +1308,13 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}
 			},
 			async getComponent() {
-				try {
-					const res = await fetch(`https://manager.vueplay.io/applications?slug=${this.slug}`, {
-						headers: {
-							Authorization: `Bearer ${this.account?.accessToken}`
-						}
-					});
-					const apps = await res.json();
-					this.component = apps?.data?.[0];
-				} catch (e) {
-					console.log(e);
-				}
+				const res = await fetch(`https://manager.vueplay.io/applications?slug=${this.slug}`, {
+					headers: {
+						Authorization: `Bearer ${this.account?.accessToken}`
+					}
+				});
+				const apps = await res.json();
+				this.component = apps?.data?.[0];
 			},
 			normalize(input) {
 				return input.normalize('NFD')
@@ -1358,7 +1354,6 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			async loadComponent(url = `https://manager.vueplay.io/${this.slug}@${this.version || this.component?.latest_version || 'latest'}/esm`) {
 				if (typeof window !== 'undefined') return this.loadIframes();
 				if (this.component?.type !== 'vue-sfc' && !this.version) return;
-				
 				try {
 					const response = await fetch(url, {
 						headers: {
@@ -1430,7 +1425,6 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 		},
 		head() {
 			const baseUrl = "https://vueplay.com";
-			const imageUrl = `${baseUrl}/screenshot.png`;
 			let title = "Vue Play Market";
 			let description = "Explore and discover a wide range of Vue components and applications on the Vue Play Market.";
 			let currentUrl = `${baseUrl}${this.$route.fullPath}`;
@@ -1442,6 +1436,10 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			if (this.component) {
 				title = `${this.component.title} - Vue Play Market`;
 				description = this.component.description || `Explore "${this.component.title}" on Vue Play Market.`;
+			}
+			let imageUrl = `${baseUrl}/screenshot.png`;
+			if (['http', 'data'].some(img => this.component.icon.startsWith(img))) {
+				imageUrl = this.component.icon;
 			}
 			return {
 				title: title,
@@ -1468,8 +1466,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}, {
 					hid: 'og:image',
 					property: 'og:image',
-					content: this.component?.icon && !this.component.icon.startsWith('<svg') && new URL(this.component.icon.startsWith('http') ? this.component.icon : `${baseUrl}${this.component.icon}`)
-						.protocol.startsWith('http') ? this.component.icon.startsWith('http') ? this.component.icon : `${baseUrl}${this.component.icon}` : imageUrl
+					content: imageUrl
 				}, {
 					hid: 'twitter:card',
 					name: 'twitter:card',
@@ -1485,8 +1482,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}, {
 					hid: 'twitter:image',
 					name: 'twitter:image',
-					content: this.component?.icon && !this.component.icon.startsWith('<svg') && new URL(this.component.icon.startsWith('http') ? this.component.icon : `${baseUrl}${this.component.icon}`)
-						.protocol.startsWith('http') ? this.component.icon.startsWith('http') ? this.component.icon : `${baseUrl}${this.component.icon}` : imageUrl
+					content: imageUrl
 				}],
 				link: [{
 					hid: 'canonical',

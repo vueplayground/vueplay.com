@@ -1428,7 +1428,12 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			const imageUrl = `${baseUrl}/screenshot.png`;
 			let title = "Vue Play Market";
 			let description = "Explore and discover a wide range of Vue components and applications on the Vue Play Market.";
-			let currentUrl = `${baseUrl}${this.$route.fullPath || `/market/${this.category}/${this.slug}/${this.version}`}`;
+			let currentUrl = `${baseUrl}${this.$route.fullPath}`;
+			if (!this.$route.fullPath && this.version) {
+				currentUrl += `/market/${this.category}/${this.slug}/${this.version}`;
+			} else if (!this.$route.fullPath) {
+				currentUrl += `/market/${this.category}/${this.slug}`;
+			}
 			if (this.component) {
 				title = `${this.component.title} - Vue Play Market`;
 				description = this.component.description || `Explore "${this.component.title}" on Vue Play Market.`;

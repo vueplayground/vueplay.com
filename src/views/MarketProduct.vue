@@ -1062,7 +1062,6 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				return `# .npmrc<br/>@vueplayio:registry=https://manager.vueplay.io/<br/>//manager.vueplay.io/:_authToken=`;
 			},
 			pre() {
-				return {};
 				const version = this.version || this.component?.latest_version || 'latest';
 				return {
 					install: {
@@ -1309,13 +1308,17 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}
 			},
 			async getComponent() {
-				const res = await fetch(`https://manager.vueplay.io/applications?slug=${this.slug}`, {
-					headers: {
-						Authorization: `Bearer ${this.account?.accessToken}`
-					}
-				});
-				const apps = await res.json();
-				this.component = apps?.data?.[0];
+				try {
+					const res = await fetch(`https://manager.vueplay.io/applications?slug=${this.slug}`, {
+						headers: {
+							Authorization: `Bearer ${this.account?.accessToken}`
+						}
+					});
+					const apps = await res.json();
+					this.component = apps?.data?.[0];
+				} catch (e) {
+					console.log(e);
+				}
 			},
 			normalize(input) {
 				return input.normalize('NFD')

@@ -1357,7 +1357,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			},
 			async loadComponent(url = `https://manager.vueplay.io/${this.slug}@${this.version || this.component?.latest_version || 'latest'}/esm`) {
 				if (typeof window !== 'undefined') return this.loadIframes();
-				if (!this.component?.type === 'vue-sfc' && !this.version) return;
+				if (this.component?.type !== 'vue-sfc' && !this.version) return;
 				try {
 					const response = await fetch(url, {
 						headers: {

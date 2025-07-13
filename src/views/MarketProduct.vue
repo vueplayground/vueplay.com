@@ -1124,8 +1124,8 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			async init(lazy = false) {
 				if (lazy) return await this.loadComponent();
 				if (!this.version) {
-					await this.checkReadAccess();
-					if (!this.component) await this.getComponent();
+					//await this.checkReadAccess();
+					//if (!this.component) await this.getComponent();
 					//await this.loadComponent();
 				} else {
 					const sequenceA = (async () => {

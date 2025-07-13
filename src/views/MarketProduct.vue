@@ -1062,6 +1062,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				return `# .npmrc<br/>@vueplayio:registry=https://manager.vueplay.io/<br/>//manager.vueplay.io/:_authToken=`;
 			},
 			pre() {
+				return {};
 				const version = this.version || this.component?.latest_version || 'latest';
 				return {
 					install: {
@@ -1126,7 +1127,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				if (!this.version) {
 					await this.checkReadAccess();
 					if (!this.component) await this.getComponent();
-					//await this.loadComponent();
+					await this.loadComponent();
 				} else {
 					const sequenceA = (async () => {
 						await this.checkReadAccess();

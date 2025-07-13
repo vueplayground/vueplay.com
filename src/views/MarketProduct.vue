@@ -1356,6 +1356,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				this.blobUrlSlots = blobUrlSlots;
 			},
 			async loadComponent(url = `https://manager.vueplay.io/${this.slug}@${this.version || this.component?.latest_version || 'latest'}/esm`) {
+				return;
 				if (typeof window !== 'undefined') return this.loadIframes();
 				if (this.component?.type !== 'vue-sfc' && !this.version) return;
 				try {

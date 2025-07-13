@@ -882,7 +882,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									fill="currentColor"
 								/>
 							</svg> </a><a
-							:href="'https://www.reddit.com/submit?url=https://vueplay.com/market/' + category + '/' + component?.slug + '&title=' + component?.name"
+							:href="'https://www.reddit.com/submit?url=https://vueplay.com/market/' + category + '/' + component?.slug + '&title=' + component?.title"
 							target="_blank"
 						><svg
 								width="42"
@@ -894,7 +894,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									d="M12.606 20.986a.408.408 0 0 0-.289.696 5.74 5.74 0 0 0 3.712 1.14h-.012a5.68 5.68 0 0 0 3.715-1.152l-.014.01a.45.45 0 0 0 .035-.58l.001.001a.41.41 0 0 0-.58 0 4.92 4.92 0 0 1-3.152.912l.013.001a4.9 4.9 0 0 1-3.154-.922l.014.01a.4.4 0 0 0-.287-.119h-.003zM19.436 16a1.562 1.562 0 1 0 1.562 1.561A1.564 1.564 0 0 0 19.436 16m-6.873 0a1.56 1.56 0 1 1-.001 3.121A1.56 1.56 0 0 1 12.563 16m9.698-9.067a1.55 1.55 0 1 1-1.56 1.635v-.004l-3.245-.684-1 4.682a10.8 10.8 0 0 1 5.878 1.884l-.037-.024c.38-.379.905-.614 1.485-.614h.025-.001A2.194 2.194 0 0 1 25.998 16a2.27 2.27 0 0 1-1.249 2.011l-.013.006c.033.191.052.412.052.637v.014-.001c0 3.367-3.911 6.086-8.752 6.086s-8.752-2.719-8.752-6.086v-.005q0-.351.057-.687l-.003.024a2.191 2.191 0 0 1 .893-4.192h.001a2.2 2.2 0 0 1 1.509.613l-.001-.001a10.55 10.55 0 0 1 5.924-1.858h.004l1.106-5.226a.43.43 0 0 1 .173-.245l.002-.001a.44.44 0 0 1 .3-.052h-.003l3.631.771a1.52 1.52 0 0 1 1.375-.876zM16 1.004C7.718 1.004 1.004 7.718 1.004 16S7.718 30.996 16 30.996 30.996 24.282 30.996 16c0-4.141-1.678-7.89-4.392-10.604A14.95 14.95 0 0 0 16 1.004"
 								/>
 							</svg> </a><a
-							:href="'https://twitter.com/intent/tweet?url=https://vueplay.com/market/' + category + '/' + component?.slug + '&text=' + component?.name"
+							:href="'https://twitter.com/intent/tweet?url=https://vueplay.com/market/' + category + '/' + component?.slug + '&text=' + component?.title"
 							target="_blank"
 						><svg
 								width="38"
@@ -907,7 +907,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 									fill="currentColor"
 								/>
 							</svg> </a><a
-							:href="'https://www.linkedin.com/shareArticle?mini=true&url=https://vueplay.com/market/' + category + '/' + component?.slug"
+							:href="'https://www.linkedin.com/shareArticle?mini=true&url=https://vueplay.com/market/' + category + '/' + component?.title"
 							target="_blank"
 						><svg
 								width="40"

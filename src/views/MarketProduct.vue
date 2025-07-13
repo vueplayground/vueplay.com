@@ -1020,7 +1020,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			copyDeepEvent: null,
 			displayCode: false,
 			displayAnalyze: false,
-			mountCount: 0
+			mountCount: 1
 		}),
 		async mounted() {
 			await this.init(this.component ? true : false);

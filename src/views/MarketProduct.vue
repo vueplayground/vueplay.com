@@ -415,11 +415,15 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 						<Box
 							data-allow-mismatch="children"
 							width="{`default`:{`xs`:{`light`:`100%`}}}"
+							justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
+							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
 							v-else-if="!blobUrl || component?.disable_preview"
 							style="aspect-ratio:16/9;width:100%"
 							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 15%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
 							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-						>Loading ...</Box>
+						>
+							<span class="loader" />
+						</Box>
 						<Box
 							data-allow-mismatch="children"
 							padding="{`default`:{`xs`:{`light`:`0px`}}}"

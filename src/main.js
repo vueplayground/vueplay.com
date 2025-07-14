@@ -95,7 +95,7 @@ let boot = async () => {
             await market.authenticate({ strategy: 'jwt', accessToken: global.accessToken })
         }
     } catch (e) {
-        console.log('Could not authenticate', e)
+        // console.log('Could not authenticate', e)
     }
 
     let timeout = null
@@ -192,7 +192,9 @@ let boot = async () => {
             if (typeof document !== 'undefined') {
                 document.cookie = `accessToken=${account.value.accessToken}; domain=${location.hostname}; path=/; Secure; SameSite=None`
             }
-        } catch (e) {}
+        } catch (e) {
+            // console.log('Could not authenticate', e)
+        }
         return account.value
     })
     app.provide('refresh', refresh)

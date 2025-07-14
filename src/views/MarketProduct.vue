@@ -1550,7 +1550,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 	}
 
 	.loader {
-		margin: 150px 0px;
+		margin: 250px 0px;
 		transform: rotateZ(45deg);
 		perspective: 1000px;
 		border-radius: 50%;

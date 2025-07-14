@@ -1130,12 +1130,12 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				if (lazy && this.enableLazy) return await this.loadComponent();
 				if (!this.version) {
 					await this.checkReadAccess();
-					if (!this.component && this.enableLazy) await this.getComponent();
+					if (!this.component || !this.enableLazy) await this.getComponent();
 					await this.loadComponent();
 				} else {
 					const sequenceA = (async () => {
 						await this.checkReadAccess();
-						if (!this.component && this.enableLazy) await this.getComponent();
+						if (!this.component || !this.enableLazy) await this.getComponent();
 					})();
 					const sequenceB = this.loadComponent();
 					await Promise.all([sequenceA, sequenceB]);

@@ -208,7 +208,7 @@
 							</Box>
 						</Box><img
 							src="@/assets/screenshot.webp"
-							style="border-radius:1px"
+							style="border-radius:3px"
 						/>
 					</Box>
 					<Box

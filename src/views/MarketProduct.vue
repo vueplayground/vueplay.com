@@ -1443,10 +1443,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				title = `${this.component.title} - Vue Play Market`;
 				description = this.component.description || `Explore "${this.component.title}" on Vue Play Market.`;
 			}
-			let imageUrl = `${baseUrl}/screenshot.png`;
-			if (['http'].some(img => this.component?.icon?.startsWith(img))) {
-				imageUrl = this.component.icon;
-			}
+			let imageUrl = `https://manager.vueplay.io/image/${this.component.slug}`;
 
 			let script = []
 			if (this.component?.price) {

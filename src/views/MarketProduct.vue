@@ -1019,14 +1019,9 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			modal: false,
 			copyDeepEvent: null,
 			displayCode: false,
-			displayAnalyze: false,
-			enableLazy: false
+			displayAnalyze: false
 		}),
 		async mounted() {
-			if (!window.disableLazy) {
-				this.enableLazy = true;
-				window.disableLazy = true;
-			}
 			await this.init(this.component ? true : false);
 			window.addEventListener('message', this.handleMessage);
 			this.iframe = document.getElementById('playground');
@@ -1127,15 +1122,15 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				}, '*');
 			},
 			async init(lazy = false) {
-				if (lazy && this.enableLazy) return await this.loadComponent();
+				if (lazy) return await this.loadComponent();
 				if (!this.version) {
 					await this.checkReadAccess();
-					if (!this.component || !this.enableLazy) await this.getComponent();
+					if (!this.component) await this.getComponent();
 					await this.loadComponent();
 				} else {
 					const sequenceA = (async () => {
 						await this.checkReadAccess();
-						if (!this.component || !this.enableLazy) await this.getComponent();
+						if (!this.component) await this.getComponent();
 					})();
 					const sequenceB = this.loadComponent();
 					await Promise.all([sequenceA, sequenceB]);

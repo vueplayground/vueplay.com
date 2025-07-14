@@ -236,7 +236,7 @@ backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + compo
 			term: ''
 		}),
 		async mounted() {
-			if (this.components) return console.log('Already fetched components with ssr', this.components)
+			if (this.components) return
 			await this.getComponents();
 		},
 		async serverPrefetch() {

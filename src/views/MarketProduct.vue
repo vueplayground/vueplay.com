@@ -188,6 +188,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 						</Box>
 					</Box>
 					<Box
+						data-allow-mismatch="children"
 						padding="{`default`:{`xs`:{`light`:`0px`}}}"
 						alignItems="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`normal`}}}"
 						gap="{`default`:{`xs`:{`light`:`30px`}}}"
@@ -200,6 +201,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 							style="width:100%;aspect-ratio:16/9"
 						/> </Box>
 					<Box
+						data-allow-mismatch="children"
 						padding="{`default`:{`xs`:{`light`:`0px`}}}"
 						alignItems="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`normal`}}}"
 						gap="{`default`:{`xs`:{`light`:`30px`}}}"
@@ -363,16 +365,19 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 											color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 70%, black)`,`dark`:`color-mix(in oklch, var(--color-neutral) 70%, white)`}}}"
 										>Component {{ displayCode ? 'code' : (displayAnalyze ? 'analysis' : 'preview') }}</Box>
 									</Box><iframe
+										data-allow-mismatch="attribute"
 										:src="blobUrl"
 										id="playground"
 										style="width: 100%;aspect-ratio:16/9!important;;border-radius:4px"
 									/><iframe
+										data-allow-mismatch="attribute"
 										:src="blobUrl"
 										id="modal"
 										name="modal"
 										style="width: 100%;height:100%;position:fixed;top:0px;left:0px;z-index:1000"
 										v-show="modal"
 									/><iframe
+										data-allow-mismatch="attribute"
 										:src="blobUrlSlots"
 										id="slots"
 										style="width: 100%;aspect-ratio:16/9!important;margin-top:10px;max-height:150px"
@@ -389,6 +394,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 									marginRight="{`default`:{`xl`:{`light`:`-20px`}}}"
 									v-show="!displayAnalyze"
 								><iframe
+										data-allow-mismatch="attribute"
 										:src="blobUrlControls"
 										id="controls"
 										style="width: 100%;height:100%"

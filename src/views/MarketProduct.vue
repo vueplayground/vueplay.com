@@ -12,10 +12,16 @@
 				expand="true"
 				justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
 			>
-				<span
+
+				<Box
 					v-if="!component"
-					class="loader"
-				/>
+					expand="{`default`:{`xs`:{`light`:true}}}"
+					justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
+					alignItems="{`default`:{`xs`:{`light`:`center`}}}"
+					height="{`default`:{`xs`:{`light`:`calc(100vh - 500px)`}}}"
+				>
+					<span class="loader" />
+				</Box>
 				<Box
 					v-else=""
 					contain="{`default`:{`xs`:{`light`:true}}}"
@@ -1550,7 +1556,6 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 	}
 
 	.loader {
-		margin: 250px 0px;
 		transform: rotateZ(45deg);
 		perspective: 1000px;
 		border-radius: 50%;

@@ -199,6 +199,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 						</Box>
 					</Box>
 					<Box
+						style="position: relative"
 						data-allow-mismatch="children"
 						padding="{`default`:{`xs`:{`light`:`0px`}}}"
 						alignItems="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`normal`}}}"
@@ -207,11 +208,17 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 						marginBottom="{`default`:{`xs`:{`light`:`30px`}}}"
 						flexWrap="{`default`:{`lg`:{`light`:`nowrap`}}}"
 						v-if="component?.showcase_url"
-					><iframe
+					>
+						<span
+							style="position:absolute;top: calc(50% - 24px); left: calc(50% - 24px)"
+							class="loader"
+						/> <iframe
 							:src="component.showcase_url"
-							style="width:100%;aspect-ratio:16/9"
-						/> </Box>
+							style="z-index: 1; width:100%;aspect-ratio:16/9"
+						/>
+					</Box>
 					<Box
+						style="position: relative"
 						data-allow-mismatch="children"
 						padding="{`default`:{`xs`:{`light`:`0px`}}}"
 						alignItems="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`normal`}}}"
@@ -220,10 +227,15 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 						marginBottom="{`default`:{`xs`:{`light`:`30px`}}}"
 						flexWrap="{`default`:{`lg`:{`light`:`nowrap`}}}"
 						v-else-if="component?.type === 'vue-template' || component?.type === 'vue-app'"
-					><iframe
+					>
+						<span
+							style="position:absolute;top: calc(50% - 24px); left: calc(50% - 24px)"
+							class="loader"
+						/> <iframe
 							:src="'https://' + slug + '.vueplay.com'"
-							style="width:100%;aspect-ratio:16/9"
-						/> </Box>
+							style="z-index: 1; width:100%;aspect-ratio:16/9"
+						/>
+					</Box>
 					<Box
 						padding="{`default`:{`xs`:{`light`:`0px`}}}"
 						alignItems="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`normal`}}}"
@@ -254,9 +266,10 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 								<Box
 									padding="{`default`:{`xs`:{`light`:`0px 5px`},`xl`:{`light`:`0px`}}}"
 									width="{`default`:{`xs`:{`light`:`100%`},`xl`:{`light`:`calc(100% - 250px)`}}}"
-									style="flex-grow:1"
+									style="flex-grow:1;position: relative"
 								>
 									<Box
+										style="position: relative"
 										padding="{`default`:{`xs`:{`light`:`0px`}}}"
 										width="{`default`:{`xs`:{`light`:`100%`}}}"
 										reverse="{`default`:{`xs`:{`light`:true}}}"
@@ -375,11 +388,14 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 											alignItems="{`default`:{`xs`:{`light`:`center`}}}"
 											color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 70%, black)`,`dark`:`color-mix(in oklch, var(--color-neutral) 70%, white)`}}}"
 										>Component {{ displayCode ? 'code' : (displayAnalyze ? 'analysis' : 'preview') }}</Box>
-									</Box><iframe
+									</Box> <span
+										style="position:absolute;top: calc(50% - 24px); left: calc(50% - 24px)"
+										class="loader"
+									/> <iframe
 										data-allow-mismatch="attribute"
 										:src="blobUrl"
 										id="playground"
-										style="width: 100%;aspect-ratio:16/9!important;;border-radius:4px"
+										style="z-index: 1; width: 100%;aspect-ratio:16/9!important;border-radius:4px"
 									/><iframe
 										data-allow-mismatch="attribute"
 										:src="blobUrl"
@@ -391,25 +407,30 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 										data-allow-mismatch="attribute"
 										:src="blobUrlSlots"
 										id="slots"
-										style="width: 100%;aspect-ratio:16/9!important;margin-top:10px;max-height:150px"
+										style="z-index: 1; width: 100%;aspect-ratio:16/9!important;margin-top:10px;max-height:150px"
 										v-if="analyze?.analyze?.slots?.length"
 										v-show="!displayAnalyze"
 									/>
 								</Box>
 								<Box
+									style="position: relative"
 									padding="{`default`:{`xs`:{`light`:`0px`}}}"
 									width="{`default`:{`xs`:{`light`:`100%`},`xl`:{`light`:`250px`}}}"
 									marginTop="{`default`:{`xs`:{`light`:`20px`},`xl`:{`light`:`0`}}}"
 									height="{`default`:{`xs`:{`light`:`330px`},`lg`:{`light`:`470px`},`xl`:{`light`:`auto`}}}"
 									v-if="analyze?.analyze?.props?.length"
 									marginRight="{`default`:{`xl`:{`light`:`-20px`}}}"
+									justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
+									alignItems="{`default`:{`xs`:{`light`:`center`}}}"
 									v-show="!displayAnalyze"
-								><iframe
+								>
+									<iframe
 										data-allow-mismatch="attribute"
 										:src="blobUrlControls"
 										id="controls"
-										style="width: 100%;height:100%"
-									/></Box>
+										style="z-index: 1; width: 100%;height:100%"
+									/>
+								</Box>
 							</Box>
 						</Box>
 						<Box

@@ -210,7 +210,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 						flexWrap="{`default`:{`lg`:{`light`:`nowrap`}}}"
 						v-else-if="component?.type === 'vue-template' || component?.type === 'vue-app'"
 					><iframe
-							:src="'https://' + component.slug + '.vueplay.com'"
+							:src="'https://' + slug + '.vueplay.com'"
 							style="width:100%;aspect-ratio:16/9"
 						/> </Box>
 					<Box
@@ -1165,7 +1165,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 			},
 			async newToken() {
 				try {
-					const title = prompt('Name your token', `${this.component.title || this.component.slug}`);
+					const title = prompt('Name your token', `${this.component.title || this.slug}`);
 					if (!title) return;
 					const now = new Date();
 					const token = await this.auth.service('auth_sessions')
@@ -1443,7 +1443,7 @@ marginTop: (component?.public && !component?.price) ? '50px' : undefined
 				title = `${this.component.title} - Vue Play Market`;
 				description = this.component.description || `Explore "${this.component.title}" on Vue Play Market.`;
 			}
-			let imageUrl = `https://manager.vueplay.io/image/${this.component.slug}`;
+			let imageUrl = `https://manager.vueplay.io/image/${this.slug}`;
 
 			let script = []
 			if (this.component?.price) {

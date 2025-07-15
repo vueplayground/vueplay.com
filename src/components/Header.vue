@@ -135,7 +135,7 @@
 						Market
 					</button> </Box>
 				<Navigator
-					backgroundColor="{`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 40%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}},`current`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 30%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}},`active`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 30%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}}}"
+					backgroundColor="{`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 40%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}},`current`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 30%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 50%, black)`}},`active`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 30%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}}}"
 					style="height:100%;overflow:visible;transition:none;font-weight:250;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"
 					fontWeight="{`current`:{`xs`:{`light`:`600`}}}"
 					borderBottomWidth="{`default`:{`xs`:{`light`:`1px`},`md`:{`light`:`4px`}}}"

@@ -32,7 +32,7 @@
 					<main class="p-6 m-auto max-w-xl container">
 						<Box
 							class="shadow mb-6 rounded-lg bg-white p-6"
-							backgroundColor="{`default`:{`xs`:{`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
 							<h3>Redesign main menu of Vue Play Studio</h3><Text
@@ -47,7 +47,7 @@
 						</Box>
 						<Box
 							class="shadow mb-6 rounded-lg bg-white p-6"
-							backgroundColor="{`default`:{`xs`:{`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
 							<h3>Stable release of Arctic PRO</h3><Text
@@ -62,7 +62,7 @@
 						</Box>
 						<Box
 							class="shadow mb-6 rounded-lg bg-white p-6"
-							backgroundColor="{`default`:{`xs`:{`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
 							<h3>Vue Play Studio Darkmode</h3><Text

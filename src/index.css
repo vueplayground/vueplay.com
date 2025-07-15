@@ -29,4 +29,6 @@
   --image-label-black-svg: url(@/assets/icons/label-black.svg);
   --image-github-black-svg: url(@/assets/icons/github-black.svg);
   --image-github-white-svg: url(@/assets/icons/github-white.svg);
+  --image-x-dark-svg: url(@/_templates/arctic/assets/x-dark.svg);
+  --image-caret-dark-svg: url(@/_templates/arctic/assets/caret-dark.svg);
 }

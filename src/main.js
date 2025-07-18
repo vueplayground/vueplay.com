@@ -9,6 +9,7 @@ import router from '@/router.js'
 import { VueHeadMixin, createUnhead } from '@unhead/vue'
 import feathers from '@feathersjs/client'
 import sio from 'socket.io-client'
+import restClient from './rest-client.js'
 import '@/index.css'
 
 const isServer = typeof window === 'undefined'
@@ -36,7 +37,6 @@ if (!isServer) {
     managerClient = feathers.socketio(managerSocket)
     marketClient = feathers.socketio(marketSocket)
 } else {
-    const restClient = (await import('./rest-client.js')).default
     authClient = restClient('https://auth.vueplay.io').fetch(fetch)
     managerClient = restClient('https://manager.vueplay.io').fetch(fetch)
     marketClient = restClient('https://market.vueplay.io').fetch(fetch)

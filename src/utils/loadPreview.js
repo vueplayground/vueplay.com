@@ -33,7 +33,8 @@ export default async ({
 			comp = controls.some(c => c.control === 'boolean' && c.blob && prop.type === 'Boolean') ? `booleanComponent` : `null`;
 		}
 		let def = prop.default;
-		const normalizedType = (prop.type || typeof def || '')
+		let type = typeof prop.type === 'string' ? prop.type : ''
+		const normalizedType = (type || typeof def || '')
 			.toLowerCase();
 		switch (normalizedType) {
 			case 'string':

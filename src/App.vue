@@ -4,9 +4,6 @@
 	export default {
 		inject: ['theme'],
 		data: () => ({}),
-		mounted() {
-			document.dispatchEvent(new CustomEvent('hydration-completed'));
-		},
 		head() {
 			return {
 				link: [{

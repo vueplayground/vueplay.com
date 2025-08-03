@@ -1,0 +1,161 @@
+{
+    "name": "arctic",
+    "views": [
+        {
+            "name": "Dashboard",
+            "components": [
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                },
+                {
+                    "name": "Sidebar",
+                    "source": "@/_templates/arctic/components/Sidebar.vue"
+                }
+            ]
+        },
+        {
+            "name": "Login",
+            "components": [
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                }
+            ]
+        },
+        {
+            "name": "Basic",
+            "components": [
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                }
+            ]
+        },
+        {
+            "name": "Home",
+            "components": [
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                }
+            ]
+        },
+        {
+            "name": "NotFound",
+            "components": [
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                }
+            ]
+        }
+    ],
+    "samples": [
+        {
+            "name": "Login",
+            "components": [
+                {
+                    "name": "Login",
+                    "source": "@/_templates/arctic/views/Login.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                },
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                }
+            ]
+        },
+        {
+            "name": "NotFound",
+            "components": [
+                {
+                    "name": "NotFound",
+                    "source": "@/_templates/arctic/views/NotFound.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                },
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                }
+            ]
+        },
+        {
+            "name": "Dashboard",
+            "components": [
+                {
+                    "name": "Dashboard",
+                    "source": "@/_templates/arctic/views/Dashboard.vue"
+                },
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                },
+                {
+                    "name": "Sidebar",
+                    "source": "@/_templates/arctic/components/Sidebar.vue"
+                }
+            ]
+        },
+        {
+            "name": "Home",
+            "components": [
+                {
+                    "name": "Home",
+                    "source": "@/_templates/arctic/views/Home.vue"
+                },
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                }
+            ]
+        },
+        {
+            "name": "Basic",
+            "components": [
+                {
+                    "name": "Basic",
+                    "source": "@/_templates/arctic/views/Basic.vue"
+                },
+                {
+                    "name": "Footer",
+                    "source": "@/_templates/arctic/components/Footer.vue"
+                },
+                {
+                    "name": "Header",
+                    "source": "@/_templates/arctic/components/Header.vue"
+                }
+            ]
+        }
+    ]
+}

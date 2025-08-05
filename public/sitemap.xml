@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vueplay.com/</loc>
-    <lastmod>2025-07-22T10:21:51Z</lastmod>
+    <lastmod>2025-08-05T14:20:12Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://vueplay.com/api-documentation</loc>
-    <lastmod>2025-07-22T08:39:09Z</lastmod>
+    <lastmod>2025-08-05T14:27:07Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://vueplay.com/market</loc>
-    <lastmod>2025-07-14T09:36:43Z</lastmod>
+    <lastmod>2025-08-05T14:20:09Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

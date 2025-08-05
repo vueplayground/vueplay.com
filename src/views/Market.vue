@@ -397,40 +397,6 @@ backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + compo
 			}
 		},
 		head() {
-			return {
-				title: 'Vue Play - Search Engine Optimization (SEO) Made Easy',
-				meta: [{
-					name: 'description',
-					content: 'Learn how Vue Play simplifies Search Engine Optimization (SEO) for your Vue applications with dynamic meta tags and head management.'
-				}, {
-					property: 'og:title',
-					content: 'Vue Play - Effortless SEO for Vue Developers'
-				}, {
-					property: 'og:description',
-					content: 'Boost your Vue app visibility with Vue Play’s powerful SEO tools and dynamic head management.'
-				}, {
-					property: 'og:type',
-					content: 'website'
-				}, {
-					property: 'og:url',
-					content: 'https://vueplay.com/features/search-engine-optimalization'
-				}, {
-					name: 'twitter:card',
-					content: 'summary_large_image'
-				}, {
-					name: 'twitter:title',
-					content: 'Vue Play - Effortless SEO for Vue Developers'
-				}, {
-					name: 'twitter:description',
-					content: 'Boost your Vue app visibility with Vue Play’s powerful SEO tools and dynamic head management.'
-				}],
-				link: [{
-					rel: 'canonical',
-					href: 'https://vueplay.com/features/search-engine-optimalization'
-				}]
-			};
-		},
-		head() {
 			const baseUrl = "https://vueplay.com";
 			const imageUrl = `${baseUrl}/screenshot.png`; // Using the provided image URL
 

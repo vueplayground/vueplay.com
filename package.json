@@ -1,33 +1,33 @@
 {
-    "homepage": "https://vueplay.com",
-    "name": "@vueplayground/demo",
-    "version": "1.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "dependencies": {
-        "vue": "^3.5.13",
-        "vue-router": "^4.5.0",
-        "@vueplayio/text": "https://manager.vueplay.io/text@^0.0.17",
-        "@vueplayio/box": "https://manager.vueplay.io/box@^0.1.74",
-        "@vueplayio/navigator": "https://manager.vueplay.io/navigator@^0.0.134",
-        "@vueplayio/link": "https://manager.vueplay.io/link@^0.1.86",
-        "@vueplayio/title": "https://manager.vueplay.io/title@^0.1.21",
-        "@unhead/vue": "^2.0.0-rc.13",
-        "socket.io-client": "^4.7.4",
-        "@feathersjs/client": "^5.0.34",
-        "@feathersjs/rest-client": "^5.0.34",
-        "iso-3166-1-alpha-2": "^1.0.2"
-    },
-    "devDependencies": {
-        "@rollup/plugin-data-uri": "^1.0.3",
-        "@vitejs/plugin-vue": "^5.2.1",
-        "rollup-plugin-gzip": "^3.1.1",
-        "vite": "^6.0.7",
-        "tailwindcss": "^3.3.2",
-        "autoprefixer": "^10.4.14",
-        "postcss": "^8.4.24"
-    }
+  "homepage": "https://vueplay.com",
+  "name": "@vueplayground/demo",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1",
+    "@vueplayio/text": "https://manager.vueplay.io/text@^0.0.20",
+    "@vueplayio/box": "https://manager.vueplay.io/box@^0.1.85",
+    "@vueplayio/navigator": "https://manager.vueplay.io/navigator@^0.0.178",
+    "@vueplayio/link": "https://manager.vueplay.io/link@^0.1.89",
+    "@vueplayio/title": "https://manager.vueplay.io/title@^0.1.24",
+    "@unhead/vue": "^2.0.0-rc.13",
+    "socket.io-client": "^4.7.4",
+    "@feathersjs/client": "^5.0.34",
+    "@feathersjs/rest-client": "^5.0.34",
+    "iso-3166-1-alpha-2": "^1.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-data-uri": "^1.0.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "rollup-plugin-gzip": "^3.1.1",
+    "vite": "^6.0.7",
+    "tailwindcss": "^3.3.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24"
+  }
 }

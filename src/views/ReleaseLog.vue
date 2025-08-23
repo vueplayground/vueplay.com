@@ -34,6 +34,16 @@
 							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
+							<h3>23.08.2025 - Release 1.6.0</h3>
+							<ul class="indent-0 ml-5 list-disc">
+								<li>Feature - Darkmode improvements</li>
+							</ul>
+						</Box>
+						<Box
+							class="shadow mb-6 rounded-lg bg-white p-6"
+							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
+							column="{`default`:{`xs`:{`light`:true}}}"
+						>
 							<h3>22.08.2025 - Release 1.5.8</h3>
 							<ul class="indent-0 ml-5 list-disc">
 								<li>Feature - Darkmode in studio</li>

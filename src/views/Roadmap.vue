@@ -35,41 +35,11 @@
 							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
-							<h3>Redesign main menu of Vue Play Studio</h3><Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								style="margin:0px;margin-top:10px;margin-bottom:10px"
-							>Main menu should get a refreshed look with easier navigation.</Text><img
-								src="@/assets/forest.png"
-								width="100"
-								height="100"
-								style="width:100%;height:250px;border-radius:11px;object-fit:cover"
-							/>
-						</Box>
-						<Box
-							class="shadow mb-6 rounded-lg bg-white p-6"
-							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-						>
 							<h3>Stable release of Arctic PRO</h3><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								style="margin:0px;margin-top:10px;margin-bottom:10px"
 							>Add premium features & components to Arctic Pro, eg. pricing table, blog post, pagination & improved home screen.</Text><img
 								src="@/assets/arctic.png"
-								width="100"
-								height="100"
-								style="width:100%;height:250px;border-radius:11px;object-fit:cover"
-							/>
-						</Box>
-						<Box
-							class="shadow mb-6 rounded-lg bg-white p-6"
-							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-						>
-							<h3>Vue Play Studio Darkmode</h3><Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								style="margin:0px;margin-top:10px;margin-bottom:10px"
-							>Support darkmode for the builder together with some speed optimizations.</Text><img
-								src="@/assets/arctic-pro.png"
 								width="100"
 								height="100"
 								style="width:100%;height:250px;border-radius:11px;object-fit:cover"

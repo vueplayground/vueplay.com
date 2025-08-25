@@ -12,6 +12,7 @@
 					column="{`default`:{`xs`:{`light`:true}}}"
 					paddingTop="{`default`:{`xs`:{`light`:`100px`}}}"
 					alignItems="{`default`:{`xs`:{`light`:`center`}}}"
+					overflow="{`default`:{`xs`:{`light`:`visible`}}}"
 				>
 					<Title
 						style="text-align:center;max-width:800px"
@@ -57,18 +58,20 @@
 						justifyContent="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`space-between`}}}"
 						flexWrap="{`default`:{`md`:{`light`:`nowrap`}}}"
 						padding="{`default`:{`xs`:{`light`:`0px`}}}"
+						overflow="{`default`:{`xs`:{`light`:`visible`}}}"
 					>
 						<Box
 							borderRadius="{`default`:{`xs`:{`light`:`30px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`var(--color-secondary)`}}}"
 							color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
 							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							style="max-width:350px"
+							style="max-width:350px;background-image:var(--image-brushed-alum-png)"
 							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
 							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 40%, white)`}}}"
 							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`}}}"
+							class="shadow-xl"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -88,6 +91,7 @@
 								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
 								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
+								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
 							>Design</Title><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
@@ -102,10 +106,11 @@
 							column="{`default`:{`xs`:{`light`:true}}}"
 							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
 							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							style="max-width:350px"
+							style="max-width:350px;background-image:var(--image-brushed-alum-png)"
 							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
 							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 40%, white)`}}}"
 							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
+							class="shadow-xl"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -121,6 +126,7 @@
 								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
 								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
+								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
 							>Develop</Title><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
@@ -135,10 +141,11 @@
 							column="{`default`:{`xs`:{`light`:true}}}"
 							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
 							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							style="max-width:350px"
+							style="max-width:350px;background-image:var(--image-brushed-alum-png)"
 							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
 							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 40%, white)`}}}"
 							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
+							class="shadow-xl"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -159,6 +166,7 @@
 								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
 								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
+								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
 							>Launch</Title><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"

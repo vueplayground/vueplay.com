@@ -31,4 +31,7 @@
   --image-github-white-svg: url(@/assets/icons/github-white.svg);
   --image-x-dark-svg: url(@/_templates/arctic/assets/x-dark.svg);
   --image-caret-dark-svg: url(@/_templates/arctic/assets/caret-dark.svg);
+  --image-px-tile-png: url(@/assets/tiles/3px-tile.png);
+  --image-circles-png: url(@/assets/tiles/circles.png);
+  --image-brushed-alum-png: url(@/assets/tiles/brushed-alum.png);
 }

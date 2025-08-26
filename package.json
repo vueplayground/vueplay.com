@@ -16,7 +16,7 @@
     "@vueplayio/link": "https://manager.vueplay.io/link@^0.1.89",
     "@vueplayio/title": "https://manager.vueplay.io/title@^0.1.24",
     "@unhead/vue": "^2.0.14",
-    "socket.io-client": "^4.7.4",
+    "socket.io-client": "^4.8.1",
     "@feathersjs/client": "^5.0.34",
     "@feathersjs/rest-client": "^5.0.34",
     "iso-3166-1-alpha-2": "^1.0.2"

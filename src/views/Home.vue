@@ -50,7 +50,7 @@
 						iconSize="20px"
 						filter="{`hover`:{`xs`:{`light`:`contrast(115%)`}}}"
 						border="{`default`:{`xs`:{`light`:`4px solid`}}}"
-						borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 60%, white)`}},`hover`:{`xs`:{`light`:`color-mix(in oklch, #80aac4ff 60%, white)`,`dark`:`#1e3b4dff`}}}"
+						borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}},`hover`:{`xs`:{`light`:`#031b2bff`,`dark`:`#1e3b4dff`}}}"
 						transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(.97)`}}}"
 					>
 					</Link>
@@ -69,9 +69,9 @@
 							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
 							style="max-width:350px;background-image:var(--image-brushed-alum-png);transition:all .2s linear"
 							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 40%, white)`}}}"
+							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}}}"
 							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`#c940ffff`}}}"
 							class="shadow-xl"
 							transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(1.05)`}}}"
 						>
@@ -93,8 +93,7 @@
 								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
 								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-								style="color:#cbf7f1ff"
+								style="color:#f8d2fcff;text-shadow:1px 2px 1px #171616ff"
 							>Design</Title><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
@@ -104,14 +103,14 @@
 						</Box>
 						<Box
 							borderRadius="{`default`:{`xs`:{`light`:`30px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`#eb81e9ff`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`}}}"
 							color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
 							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
 							style="max-width:350px;background-image:var(--image-brushed-alum-png);transition:all .2s linear"
 							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 40%, white)`}}}"
+							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}}}"
 							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
 							class="shadow-xl"
 							transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(1.05)`}}}"
@@ -130,8 +129,7 @@
 								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
 								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-								style="color:#faf2f9ff"
+								style="color:#e1faf4ff;text-shadow:1px 2px 1px #171616ff"
 							>Develop</Title><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
@@ -141,14 +139,14 @@
 						</Box>
 						<Box
 							borderRadius="{`default`:{`xs`:{`light`:`30px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`#37b6faff`}}}"
+							backgroundColor="{`default`:{`xs`:{`light`:`#f2340fff`}}}"
 							color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
 							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
 							style="max-width:350px;background-image:var(--image-brushed-alum-png);transition:all .2s linear"
 							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`color-mix(in oklch, #80aac4ff 40%, white)`}}}"
+							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}}}"
 							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
 							class="shadow-xl"
 							transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(1.05)`}}}"
@@ -172,8 +170,7 @@
 								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
 								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
 								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-								style="color:#e6f0f7ff"
+								style="color:#fceae6ff;text-shadow:1px 2px 1px #171616ff"
 							>Launch</Title><Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"

@@ -116,7 +116,7 @@
 		methods: {
 			async getApplications() {
 				try {
-					const resultApplications = await fetch('https://manager.vueplay.io/applications?$limit=1000&type=vue-sfc&public=true&published=true&requireVersion=true', {
+					const resultApplications = await fetch('https://manager.vueplay.io/applications?$limit=1000&type=vue-sfc&public=true&published=true&requireVersion=true&hidden=false', {
 						headers: {
 							'Content-Type': 'application/json'
 						}

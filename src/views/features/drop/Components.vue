@@ -64,7 +64,7 @@
     transition: linear all .2s;width:120px;height:80px;
     cursor: pointer;align-content:center;justify-content:center;align-items:center;flex-direction:column">
 										<Box
-											v-html="application.icon || ''"
+											v-html="application.icon || '<span></span>'"
 											style="width:100%;height:50px;padding:0px"
 											justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
 											alignItems="{`default`:{`xs`:{`light`:`center`}}}"

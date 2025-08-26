@@ -1,7 +1,7 @@
 <template>
 	<Home>
 		<template #header="">
-			<Header style="position: sticky; top: 0px"></Header>
+			<Header style="position: sticky; top: 0px;z-index:1"></Header>
 		</template> <template #default="">
 			<Box
 				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
@@ -37,7 +37,7 @@
 						color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
 						borderRadius="{`default`:{`xs`:{`light`:`50px`}}}"
 						marginBottom="{`default`:{`xs`:{`light`:`80px`}}}"
-						style="transition:.15s linear all;background-image:linear-gradient(60deg, var(--color-primary), #4e6d8aff)"
+						style="background-image:linear-gradient(60deg, var(--color-primary), #4e6d8aff);transition:.15s linear all"
 						external="true"
 						target="_blank"
 						route="https://studio.vueplay.com"

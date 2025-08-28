@@ -53,7 +53,7 @@
 							>
 							</Link>
 							— a powerful library for managing &lt;head&gt; elements like titles, meta tags, links, and scripts in Vue applications. Although Unhead is framework-agnostic at its core, it integrates seamlessly into Vue through a simple and flexible API. Vue Play leverages it internally to handle SEO and page metadata dynamically.
-							<br /><br />Note: SEO features are only available for applications served via Server-Side Rendering (SSR).
+							<br /> <br />Note: SEO features are only available for applications served via Server-Side Rendering (SSR).
 						</div>
 						<p style="margin-bottom:50px;font-weight:700">Example of adding meta data using Vue Options API:</p>
 						<Box
@@ -93,7 +93,7 @@
 		},
 		data: () => ({}),
 		head() {
-			const image = "https://vueplay.com/screenshot.png"
+			const image = "https://vueplay.com/screenshot.png";
 			return {
 				title: 'Vue Play - Search Engine Optimization (SEO) Made Easy',
 				meta: [{
@@ -111,7 +111,10 @@
 				}, {
 					property: 'og:url',
 					content: 'https://vueplay.com/features/search-engine-optimalization'
-				},{ property: 'og:image', content: image }, {
+				}, {
+					property: 'og:image',
+					content: image
+				}, {
 					name: 'twitter:card',
 					content: 'summary_large_image'
 				}, {
@@ -120,8 +123,10 @@
 				}, {
 					name: 'twitter:description',
 					content: 'Boost your Vue app visibility with Vue Play’s powerful SEO tools and dynamic head management.'
-				},
-				{ name: 'twitter:image', content: image }],
+				}, {
+					name: 'twitter:image',
+					content: image
+				}],
 				link: [{
 					rel: 'canonical',
 					href: 'https://vueplay.com/features/search-engine-optimalization'

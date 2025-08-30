@@ -19,7 +19,7 @@
 						type="{`default`:{`xs`:{`light`:`h1`},`2xl`:{`light`:`h1`}}}"
 						lineHeight="{`default`:{`xs`:{`light`:`47px`},`sm`:{`light`:`67px`},`md`:{`light`:`72px`},`lg`:{`light`:`90px`}}}"
 						fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-					>Vue Play API's</Title>
+					>Unlock the Power of Vue Play APIs</Title>
 					<Title
 						style="text-align:center;margin-bottom:50px"
 						type="{`default`:{`xs`:{`light`:`h2`},`2xl`:{`light`:`h2`}}}"
@@ -111,7 +111,7 @@
 		data: () => ({}),
 		head() {
 			const url = 'https://vueplay.com/api/documentation';
-			const title = "Vue Play API's | Vue Play";
+			const title = "Unlock the Power of Vue Play APIs";
 			const description = 'Direct access for developers — integrate Vue Play your way. Explore Authentication, Manager, and Market APIs for seamless developer control and integration.';
 			const image = "https://vueplay.com/screenshot.png";
 			return {

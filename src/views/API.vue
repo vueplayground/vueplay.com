@@ -19,7 +19,7 @@
 						type="{`default`:{`xs`:{`light`:`h1`},`2xl`:{`light`:`h1`}}}"
 						lineHeight="{`default`:{`xs`:{`light`:`47px`},`sm`:{`light`:`67px`},`md`:{`light`:`72px`},`lg`:{`light`:`90px`}}}"
 						fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-					>Unlock the Power of Vue Play APIs</Title>
+					>Vue Play APIs</Title>
 					<Title
 						style="text-align:center;margin-bottom:50px"
 						type="{`default`:{`xs`:{`light`:`h2`},`2xl`:{`light`:`h2`}}}"

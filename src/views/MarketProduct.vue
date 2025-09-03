@@ -214,7 +214,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 							class="loader"
 						/> <iframe
 							:src="component.showcase_url"
-							style="z-index: 1; width:100%;aspect-ratio:16/9"
+							style="z-index: 1; width:100%;aspect-ratio:16/9;background:white"
 						/>
 					</Box>
 					<Box
@@ -233,7 +233,7 @@ backgroundImage: component?.icon?.startsWith('<svg') ? undefined : 'url(' + comp
 							class="loader"
 						/> <iframe
 							:src="'https://' + slug + '.vueplay.com'"
-							style="z-index: 1; width:100%;aspect-ratio:16/9"
+							style="z-index: 1; width:100%;aspect-ratio:16/9;background:white"
 						/>
 					</Box>
 					<Box

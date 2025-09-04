@@ -1,5 +1,6 @@
 <template>
-	<router-view :class="{ dark: theme === 'dark' }" /> </template>
+	<router-view :class="{ dark: theme === 'dark' }" />
+</template>
 <script>
 	export default {
 		inject: ['theme'],

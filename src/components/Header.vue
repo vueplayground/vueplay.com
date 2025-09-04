@@ -17,7 +17,8 @@
 			<Box
 				style="padding:8.5px 20px 8.5px 10px;align-items:center"
 				color="{`default`:{`xs`:{`light`:`white`}}}"
-			><svg
+			>
+				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					fill="currentColor"
@@ -25,7 +26,8 @@
 				>
 					<path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
 				</svg>
-				<DarkmodeSwitch style="margin-right:4px;margin-left:4px"></DarkmodeSwitch><svg
+				<DarkmodeSwitch style="margin-right:4px;margin-left:4px"></DarkmodeSwitch>
+				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					fill="currentColor"
@@ -105,7 +107,8 @@
 					<img
 						src="@/_templates/arctic/assets/vueplay.webp"
 						style="width:37px;height:40px;object-fit:contain;margin-right:15px"
-					/><span style="margin:0px;padding:0px;margin-left:-8px">Vue Play</span>
+					/>
+					<span style="margin:0px;padding:0px;margin-left:-8px">Vue Play</span>
 				</Box>
 			</router-link>
 			<Box
@@ -119,10 +122,12 @@
 				<Box
 					style="align-self:center;position:absolute;right:70px;height:62px;padding:0px"
 					display="{`default`:{`md`:{`light`:`none`}}}"
-				><button
+				>
+					<button
 						@click="$router.push('/market')"
 						style="width:100%;padding:0px 15px;"
-					><svg
+					>
+						<svg
 							viewBox="0 0 1024 1024"
 							xmlns="http://www.w3.org/2000/svg"
 							style="width:20px;float:left;margin-right:10px"
@@ -133,7 +138,8 @@
 							/>
 						</svg>
 						Market
-					</button> </Box>
+					</button>
+				</Box>
 				<Navigator
 					backgroundColor="{`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 40%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}},`current`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 30%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 50%, black)`}},`active`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 30%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}}}"
 					style="height:100%;overflow:visible;transition:none;font-weight:250;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"
@@ -152,7 +158,7 @@
 					paddingLeft="{`default`:{`xs`:{`light`:`20px`},`md`:{`light`:`20px`}}}"
 					paddingRight="{`default`:{`xs`:{`light`:`20px`},`md`:{`light`:`20px`}}}"
 					paddingBottom="{`default`:{`xs`:{`light`:`10px`},`md`:{`light`:`10px`}}}"
-					paddingTop="{`default`:{`xs`:{`light`:`10px`},`md`:{`light`:`10px`}}}"
+					paddingTop="{`default`:{`xs`:{`light`:`10px`},`md`:{`light`:`13px`}}}"
 					color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 10%, black)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, white)`}}}"
 					backgroundColorModal="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 10%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 40%, black)`}}}"
 					borderLeftWidth="{`default`:{`xs`:{`light`:`5px`},`md`:{`light`:`0px`}}}"

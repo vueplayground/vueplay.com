@@ -52,7 +52,7 @@
 									width="100"
 									height="100"
 									style="width:100%;height:250px;border-radius:11px;object-fit:cover"
-								/>https://
+								/>
 							</a>
 						</Box>
 					</main>

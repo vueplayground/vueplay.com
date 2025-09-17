@@ -43,12 +43,17 @@
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								style="margin:0px;margin-top:10px;margin-bottom:10px"
 							>Our flagship template Arctic is evolving. We’re bringing fresh improvements, smarter design, and exciting new possibilities. This is only the start of a bigger journey.</Text>
-							<img
-								src="@/assets/flagship.png"
-								width="100"
-								height="100"
-								style="width:100%;height:250px;border-radius:11px;object-fit:cover"
-							/>
+							<a
+								href="https://arctic.vueplay.com"
+								target="_blank"
+							>
+								<img
+									src="@/assets/flagship.png"
+									width="100"
+									height="100"
+									style="width:100%;height:250px;border-radius:11px;object-fit:cover"
+								/>https://
+							</a>
 						</Box>
 					</main>
 					<Link

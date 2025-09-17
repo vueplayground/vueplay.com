@@ -1,8 +1,9 @@
 <template>
 	<Home>
-		<template #header="">
+		<template #header>
 			<Header style="position: sticky; top: 0px"></Header>
-		</template> <template #default="">
+		</template>
+		<template #default>
 			<Box
 				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
 				expand="true"
@@ -27,7 +28,9 @@
 						lineHeight="{`default`:{`xs`:{`light`:`25px`},`md`:{`light`:`28px`},`lg`:{`light`:`30px`}}}"
 						marginTop="{`default`:{`xs`:{`light`:`25px`}}}"
 						fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-					>Direct access for developers —<br />integrate Vue Play your way</Title>
+					>Direct access for developers —
+						<br />integrate Vue Play your way
+					</Title>
 					<Box>
 						<Box
 							column="{`default`:{`xs`:{`light`:true}}}"
@@ -85,7 +88,8 @@
 					</Link>
 				</Box>
 			</Box>
-		</template> <template #footer="">
+		</template>
+		<template #footer>
 			<Footer></Footer>
 		</template>
 	</Home>

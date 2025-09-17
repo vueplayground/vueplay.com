@@ -1,8 +1,9 @@
 <template>
 	<Home>
-		<template #header="">
+		<template #header>
 			<Header style="position: sticky; top: 0px"></Header>
-		</template> <template #default="">
+		</template>
+		<template #default>
 			<Box
 				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
 				expand="true"
@@ -28,18 +29,22 @@
 						marginTop="{`default`:{`xs`:{`light`:`25px`}}}"
 						fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
 						marginBottom="{`default`:{`xs`:{`light`:`50px`}}}"
-					>See what's next —<br />upcoming ideas, features, and plans in motion.</Title>
+					>See what's next —
+						<br />upcoming ideas, features, and plans in motion.
+					</Title>
 					<main class="p-6 m-auto max-w-xl container">
 						<Box
 							class="shadow mb-6 rounded-lg bg-white p-6"
 							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
-							<h3>Stable release of Arctic PRO</h3><Text
+							<h3>🧭 Set Sail with Arctic</h3>
+							<Text
 								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
 								style="margin:0px;margin-top:10px;margin-bottom:10px"
-							>Add premium features & components to Arctic Pro, eg. pricing table, blog post, pagination & improved home screen.</Text><img
-								src="@/assets/arctic.png"
+							>Our flagship template Arctic is evolving. We’re bringing fresh improvements, smarter design, and exciting new possibilities. This is only the start of a bigger journey.</Text>
+							<img
+								src="@/assets/flagship.png"
 								width="100"
 								height="100"
 								style="width:100%;height:250px;border-radius:11px;object-fit:cover"
@@ -60,7 +65,8 @@
 					</Link>
 				</Box>
 			</Box>
-		</template> <template #footer="">
+		</template>
+		<template #footer>
 			<Footer></Footer>
 		</template>
 	</Home>

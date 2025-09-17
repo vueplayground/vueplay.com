@@ -1,8 +1,9 @@
 <template>
 	<Home>
-		<template #header="">
+		<template #header>
 			<Header style="position: sticky; top: 0px"></Header>
-		</template> <template #default="">
+		</template>
+		<template #default>
 			<Box
 				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
 				expand="true"
@@ -27,8 +28,20 @@
 						lineHeight="{`default`:{`xs`:{`light`:`25px`},`md`:{`light`:`28px`},`lg`:{`light`:`30px`}}}"
 						marginTop="{`default`:{`xs`:{`light`:`25px`}}}"
 						fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-					>Changelog of progress —<br />new features, fixes, and improvements as they happen.</Title>
+					>Changelog of progress —
+						<br />new features, fixes, and improvements as they happen.
+					</Title>
 					<main class="p-6 m-auto max-w-xl container">
+						<Box
+							class="shadow mb-6 rounded-lg bg-white p-6"
+							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
+							column="{`default`:{`xs`:{`light`:true}}}"
+						>
+							<h3>17.09.2025 - Release 1.6.2</h3>
+							<ul class="indent-0 ml-5 list-disc">
+								<li>Feature - Added support for more css styles</li>
+							</ul>
+						</Box>
 						<Box
 							class="shadow mb-6 rounded-lg bg-white p-6"
 							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
@@ -559,25 +572,25 @@
 								06.02.2024 - Release 1.1.7
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Component property controls
 								</li>
-								<li class="">
+								<li class>
 									Feature - Attribute categories has been grouped
 								</li>
-								<li class="">
+								<li class>
 									Feature - Swap between dynamic and static attributes
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Improved attribute controls
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Selector optimalization
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Speed optimalization
 								</li>
-								<li class="">
+								<li class>
 									Bugfix - Scroll position for controls should now work properly
 								</li>
 							</ul>
@@ -591,10 +604,10 @@
 								25.01.2024 - Release 1.1.6
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Enhancement - Improvement of scoped isolation
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Added icons on menu
 								</li>
 							</ul>
@@ -608,19 +621,19 @@
 								10.01.2024 - Release 1.1.5
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Announcement - Starter Kit is under development
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Temporarily hided uncompleted layouts
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Moved desktop sync buttons to bottom of file explorer
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Improved login page
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Improved loader design
 								</li>
 							</ul>
@@ -634,7 +647,7 @@
 								05.12.2023 - Release 1.1.4
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Bugfix - Fix dist folder and version args
 								</li>
 							</ul>
@@ -648,7 +661,7 @@
 								05.12.2023 - Release 1.1.3
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Bugfix - Fix dependencies for npm package
 								</li>
 							</ul>
@@ -662,7 +675,7 @@
 								05.12.2023 - Release 1.1.2
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Enhancement - Start and stop sync
 								</li>
 							</ul>
@@ -676,7 +689,7 @@
 								05.12.2023 - Release 1.1.1
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Bugfix - Always check state after local changes (2)
 								</li>
 							</ul>
@@ -690,7 +703,7 @@
 								05.12.2023 - Release 1.1.0
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Bugfix - Always check state after local changes
 								</li>
 							</ul>
@@ -704,13 +717,13 @@
 								04.12.2023 - Release 1.0.9
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Published on npm: `npm i -g @vueplayground/vueplay`
 								</li>
-								<li class="">
+								<li class>
 									Feature - CLI build with local project storage
 								</li>
-								<li class="">
+								<li class>
 									Feature - Sync project directory to get full freedom using any text editor of your choice
 								</li>
 							</ul>
@@ -724,40 +737,40 @@
 								21.10.2023 - Release 1.0.8
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Export Single File Component(s) as WordPress Elementor Addon Plugin
 								</li>
-								<li class="">
+								<li class>
 									Feature - Relative paths supported
 								</li>
-								<li class="">
+								<li class>
 									Feature - Typescript support
 								</li>
-								<li class="">
+								<li class>
 									Feature - :slotted, :global and :deep support for scoped styles
 								</li>
-								<li class="">
+								<li class>
 									Feature - Support ?raw imports identical to vite
 								</li>
-								<li class="">
+								<li class>
 									Feature - Support .json imports
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Improved controls to work side by side with Elementor controls
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Speed improvements
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - File paths added to intellisense inside code editor
 								</li>
-								<li class="">
+								<li class>
 									Fix - Live preview should now work (locally)
 								</li>
-								<li class="">
+								<li class>
 									Fix - Multi line attributes now works
 								</li>
-								<li class="">
+								<li class>
 									Pricing - Students have special price on Vue Play when purchased from
 									<a
 										href="https://github.com/marketplace/vue-play-studio"
@@ -778,13 +791,13 @@
 								26.09.2023 - Release 1.0.7
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Upgraded Tailwind Control Selectors
 								</li>
-								<li class="">
+								<li class>
 									Feature - Hide unverified components from studio
 								</li>
-								<li class="">
+								<li class>
 									Feature - Expose component attributes in advanced tab
 								</li>
 							</ul>
@@ -798,13 +811,13 @@
 								14.08.2023 - Release 1.0.6
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Support for Composition API
 								</li>
-								<li class="">
+								<li class>
 									Feature - Support for v-bind in styles
 								</li>
-								<li class="">
+								<li class>
 									Feature - Added &lt;suspense/&gt; element to support async / await on root level of setup
 								</li>
 							</ul>
@@ -818,7 +831,7 @@
 								24.07.2023 - Release 1.0.5
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Drag and drop Tailwind Hero Icons into the Playground
 								</li>
 							</ul>
@@ -832,28 +845,28 @@
 								17.07.2023 - Release 1.0.4
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Feature - Create Single File Components
 								</li>
-								<li class="">
+								<li class>
 									Feature - Publishment of Single File Components
 								</li>
-								<li class="">
+								<li class>
 									Feature - Add keyframe on animation timeline
 								</li>
-								<li class="">
+								<li class>
 									Feature - Duplicate keyframe on animation timeline
 								</li>
-								<li class="">
+								<li class>
 									Feature - Delete keyframe on animation timeline
 								</li>
-								<li class="">
+								<li class>
 									Feature - Line height style controller
 								</li>
-								<li class="">
+								<li class>
 									Feature - Router highlight overlay
 								</li>
-								<li class="">
+								<li class>
 									Enhancement - Correct position of drag and drop ghost
 								</li>
 							</ul>
@@ -868,13 +881,13 @@
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
 								<li
-									class=""
+									class
 									style="height:29px"
 								>
 									Design - Huge design update
 								</li>
 								<li
-									class=""
+									class
 									style="height:29px"
 								>
 									Enhancement - Better tailwind style controllers
@@ -890,7 +903,7 @@
 								20.06.2023 - Release 1.0.2
 							</h3>
 							<ul class="indent-0 ml-5 list-disc">
-								<li class="">
+								<li class>
 									Design - Progress bar on save / pull / push
 								</li>
 								<li>
@@ -1018,7 +1031,8 @@
 					</Link>
 				</Box>
 			</Box>
-		</template> <template #footer="">
+		</template>
+		<template #footer>
 			<Footer></Footer>
 		</template>
 	</Home>

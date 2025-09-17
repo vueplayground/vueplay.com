@@ -11,7 +11,7 @@
     "vue": "^3.5.21",
     "vue-router": "^4.5.1",
     "@vueplayio/text": "https://manager.vueplay.io/text@^1.0.0",
-    "@vueplayio/box": "https://manager.vueplay.io/box@^1.0.0",
+    "@vueplayio/box": "https://manager.vueplay.io/box@^1.0.2",
     "@vueplayio/navigator": "https://manager.vueplay.io/navigator@^1.0.0",
     "@vueplayio/link": "https://manager.vueplay.io/link@^1.0.0",
     "@vueplayio/title": "https://manager.vueplay.io/title@^1.0.0",

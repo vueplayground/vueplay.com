@@ -8,8 +8,8 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.5.22",
-    "vue-router": "^4.6.0",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3",
     "@vueplayio/text": "https://manager.vueplay.io/text@^1.0.0",
     "@vueplayio/box": "https://manager.vueplay.io/box@^1.0.2",
     "@vueplayio/navigator": "https://manager.vueplay.io/navigator@^1.0.0",
@@ -17,8 +17,8 @@
     "@vueplayio/title": "https://manager.vueplay.io/title@^1.0.0",
     "@unhead/vue": "^2.0.19",
     "socket.io-client": "^4.8.1",
-    "@feathersjs/client": "^5.0.35",
-    "@feathersjs/rest-client": "^5.0.35",
+    "@feathersjs/client": "^5.0.37",
+    "@feathersjs/rest-client": "^5.0.37",
     "iso-3166-1-alpha-2": "^1.0.2"
   },
   "devDependencies": {

@@ -37,6 +37,16 @@
 							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
 							column="{`default`:{`xs`:{`light`:true}}}"
 						>
+							<h3>02.12.2025 - Release 1.6.5</h3>
+							<ul class="indent-0 ml-5 list-disc">
+								<li>Fix - Fix json import</li>
+							</ul>
+						</Box>
+						<Box
+							class="shadow mb-6 rounded-lg bg-white p-6"
+							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
+							column="{`default`:{`xs`:{`light`:true}}}"
+						>
 							<h3>02.12.2025 - Release 1.6.4</h3>
 							<ul class="indent-0 ml-5 list-disc">
 								<li>Fix - Fix routing</li>

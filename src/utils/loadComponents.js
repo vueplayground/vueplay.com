@@ -49,6 +49,10 @@ export default async (scope) => {
 						Authorization: `Bearer ${scope.account?.accessToken}`
 					}
 				});
+				// (a control the manager does not have answers with an error page: taken as a script it would break
+				// the whole settings panel, so such a control is left out and its prop gets the plain field)
+				const type = response.headers.get('content-type') || '';
+				if (!response.ok || !/javascript|ecmascript/.test(type)) throw new Error(`no control package (${response.status})`);
 				const code = await response.text();
 				const blobESMControl = new Blob([code.replace(`from "vue";`, `from "${name}";`)], {
 					type: 'application/javascript'

@@ -1,67 +1,31 @@
 <template>
-	<Basic>
-		<template #header="">
-			<Header style="position: sticky; top: 0px; width: 100%"></Header>
-		</template> <template #default="">
-			<Box
-				expand="true"
-				justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-			>
-				<Box
-					contain="{`default`:{`xs`:{`light`:true}}}"
-					style="padding-bottom:100px"
-					column="{`default`:{`xs`:{`light`:true}}}"
-					marginTop="{`default`:{`xs`:{`light`:`40px`}}}"
-					paddingTop="{`default`:{`xs`:{`light`:`0px`}}}"
-					paddingBottom="{`default`:{`xs`:{`light`:`0px`}}}"
-					paddingRight="{`default`:{`lg`:{`light`:`40px`}}}"
-					paddingLeft="{`default`:{`lg`:{`light`:`40px`}}}"
-				>
-					<Box
-						style="border-bottom-width:2px"
-						borderBottomColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 90%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 90%, black)`}}}"
-						paddingTop="{`default`:{`xs`:{`light`:`0px`}}}"
-						paddingRight="{`default`:{`xs`:{`light`:`0px`}}}"
-						paddingBottom="{`default`:{`xs`:{`light`:`0px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`20px`}}}"
-						paddingLeft="{`default`:{`xs`:{`light`:`0px`}}}"
-					>
-						<Text
-							type="{`default`:{`xs`:{`dark`:`h1`}}}"
-							fontSize="{`default`:{`xs`:{`light`:`30px`},`lg`:{`light`:`35px`}}}"
-							class="hash"
-							style="width:100%"
-						>Cancelled - Vue Play Professional</Text>
-					</Box>
-					<Box
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`50px`}}}"
-					>Checkout was successfully cancelled.</Box>
-				</Box>
-			</Box>
-		</template> <template #footer="">
-			<Footer style="width: 100%"></Footer>
-		</template>
-	</Basic>
+	<Page>
+		<Section class="vp-intro" space="xlarge" align="center" height="half" gap="18px">
+			<Paragraph size="small" align="center" class="vp-eyebrow">Cancelled</Paragraph>
+			<Heading level="h1" size="xlarge" align="center">Checkout cancelled</Heading>
+			<Paragraph size="large" align="center" :muted="true" width="560px">Checkout was successfully cancelled. Nothing was charged for Vue Play Professional.</Paragraph>
+			<Stack spread="center" gap="12px">
+				<Button href="/pricing">Back to pricing</Button>
+			</Stack>
+		</Section>
+	</Page>
 </template>
 <script>
-	import * as VUE from 'vue';
-	import Link from '@vueplayio/link';
-	import Basic from '@/_templates/arctic/views/Basic.vue';
-	import Footer from '@/components/Footer.vue';
-	import Header from '@/components/Header.vue';
-	import Text from '@vueplayio/text';
-	import Title from '@vueplayio/title';
-	import Box from '@vueplayio/box';
+	import Page from '@/components/Page.vue';
+	import Section from '@vueplayio/section';
+	import Heading from '@vueplayio/heading';
+	import Paragraph from '@vueplayio/paragraph';
+	import Stack from '@vueplayio/stack';
+	import Button from '@vueplayio/button';
+	import { privateHead } from '@/components/head.js';
 	export default {
 		components: {
-			Link: Link,
-			Text: Text,
-			Basic: Basic,
-			Title: Title,
-			Box: Box,
-			Footer: Footer,
-			Header: Header
+			Page,
+			Section,
+			Heading,
+			Paragraph,
+			Stack,
+			Button
 		},
 		inject: ['account', 'manager', 'market', 'refresh'],
 		data: () => ({
@@ -125,55 +89,8 @@
 			}
 		},
 		head() {
-			return {
-				title: 'Vue Play - Search Engine Optimization (SEO) Made Easy',
-				meta: [{
-					name: 'description',
-					content: 'Learn how Vue Play simplifies Search Engine Optimization (SEO) for your Vue applications with dynamic meta tags and head management.'
-				}, {
-					property: 'og:title',
-					content: 'Vue Play - Effortless SEO for Vue Developers'
-				}, {
-					property: 'og:description',
-					content: 'Boost your Vue app visibility with Vue Play’s powerful SEO tools and dynamic head management.'
-				}, {
-					property: 'og:type',
-					content: 'website'
-				}, {
-					property: 'og:url',
-					content: 'https://vueplay.com/features/search-engine-optimalization'
-				}, {
-					name: 'twitter:card',
-					content: 'summary_large_image'
-				}, {
-					name: 'twitter:title',
-					content: 'Vue Play - Effortless SEO for Vue Developers'
-				}, {
-					name: 'twitter:description',
-					content: 'Boost your Vue app visibility with Vue Play’s powerful SEO tools and dynamic head management.'
-				}],
-				link: [{
-					rel: 'canonical',
-					href: 'https://vueplay.com/features/search-engine-optimalization'
-				}]
-			};
+			return privateHead('Checkout cancelled · Vue Play');
 		}
 	};
 
 </script>
-<style scoped>
-	label {
-		display: block;
-	}
-
-	input,
-	select {
-		height: 40px;
-		border-radius: 8px;
-		box-sizing: border-box;
-		padding: 10px 20px;
-		margin-bottom: 15px;
-		color: color-mix(in oklch, var(--color-neutral) 20%, black);
-	}
-
-</style>

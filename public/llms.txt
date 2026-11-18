@@ -1,0 +1,35 @@
+# Vue Play
+
+> One editor for everyone who builds with Vue. Vue Play Studio is a visual editor in the browser that makes a real Vue project with Git: designers, developers and AI work on the same code, and you can export it and run it anywhere Vue runs.
+
+The Studio is at https://studio.vueplay.com and is free to start. Sites are published in one click to a vueplay.com address or your own domain, rendered on the server. Components and templates made in the Studio are listed, and can be sold, in the Vue Play Market.
+
+## Pages
+
+- [Vue Play Studio](https://vueplay.com/): what the Studio is, its views, the templates, the component library, the AI chat and publishing.
+- [Pricing](https://vueplay.com/pricing): Hobby is free forever with up to 3 applications; Professional is $9 a month with unlimited applications, GitHub, custom domains, teams and projects.
+- [Market](https://vueplay.com/market): Vue components and whole-site templates made in Vue Play Studio, to install with npm or start a site from.
+- [Vue components](https://vueplay.com/market/components): components to install with npm, embed from a CDN or drag in in the Studio.
+- [Vue templates](https://vueplay.com/market/templates): whole sites to start from, with their pages, pictures and look.
+- [API documentation](https://vueplay.com/api-documentation): the Vue Play Authentication, Manager, Market and Hub APIs.
+- [Release log](https://vueplay.com/release-log): every Studio release, newest first.
+- [Roadmap](https://vueplay.com/roadmap): what is coming next.
+- [Credits](https://vueplay.com/credits): the open source projects Vue Play is built on.
+
+## Features
+
+- [Features](https://vueplay.com/features): an overview of everything in the Studio.
+- [Views](https://vueplay.com/features/views): the editor arranges itself for each role: learn, design, animate, develop, backend, agent or content.
+- [Learn](https://vueplay.com/features/learn): the page above its code, a tutor that explains what you click, and nine tasks that tick themselves; made for beginners and schools.
+- [Design](https://vueplay.com/features/design): insert parts, sections and whole pages, then change words, settings, style, motion and data.
+- [Code](https://vueplay.com/features/code): real Vue code beside the page, with Git, branches, npm packages, GitHub and export.
+- [AI](https://vueplay.com/features/ai): a free AI chat that makes the change in the editor, and a chat app for your own sites.
+- [Templates](https://vueplay.com/features/templates): 17 whole sites to start from, a library of components, and a marketplace to sell your own.
+- [Publish](https://vueplay.com/features/publish): one click to go live, your own domain, pages rendered on the server and an SEO score.
+- [Teams](https://vueplay.com/features/teams): teams with owners and editors, and projects shared with the people and teams you pick.
+
+## Optional
+
+- [Terms of service](https://vueplay.com/terms-of-service): the terms for using Vue Play.
+- [Privacy policy](https://vueplay.com/privacy-policy): how Vue Play handles personal information.
+- [Discussions](https://github.com/vueplayground/vueplay.com/discussions): questions, ideas and announcements on GitHub.

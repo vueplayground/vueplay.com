@@ -1,70 +1,41 @@
 <template>
-	<NotFound>
-		<template #header="">
-			<Header style="position: sticky; top: 0px"></Header>
-		</template> <template #default="">
-			<Box
-				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
-				expand="{`default`:{`xs`:{`light`:true}}}"
-			>
-				<Box
-					column="{`default`:{`xs`:{`light`:true}}}"
-					style="padding:0px;align-items:center;justify-content:center"
-					contain="{`default`:{`xs`:{`light`:true}}}"
-				>
-					<Box
-						style="justify-content:center;"
-						color="{`default`:{`xs`:{`light`:`#151d2eff`,`dark`:`#f5f6faff`}}}"
-					>
-						<Title
-							style="text-align:center;width:100%"
-							fontSize="{`default`:{`xs`:{`light`:`40px`},`sm`:{`light`:`45px`},`md`:{`light`:`50px`},`lg`:{`light`:`60px`},`xl`:{`light`:`70px`}}}"
-							lineHeight="{`default`:{`xs`:{`light`:`50px`}}}"
-							type="{`default`:{`xs`:{`light`:`h1`}}}"
-						>Not Found</Title>
-						<Title
-							style="text-align:center;margin-top:30px;font-weight:326"
-							type="{`default`:{`xs`:{`light`:`h2`}}}"
-							fontSize="{`default`:{`xs`:{`light`:`16px`},`sm`:{`light`:`15px`},`md`:{`light`:`17px`},`lg`:{`light`:`22px`},`xl`:{`light`:`26px`}}}"
-							lineHeight="{`default`:{`xs`:{`light`:`27px`}}}"
-						>We could not find what you were looking for.</Title>
-					</Box>
-					<Box
-						style="justify-content:center;"
-						color="{`default`:{`xs`:{`light`:`#151d2eff`,`dark`:`#f5f6faff`}}}"
-						paddingRight="{`default`:{`xs`:{`light`:`0px`}}}"
-						paddingLeft="{`default`:{`xs`:{`light`:`0px`}}}"
-						gap="{`default`:{`xs`:{`light`:`20px`},`sm`:{`light`:`30px`}}}"
-					>
-						<router-link
-							class="w-40 hover:shadow-none shadow-lg duration-200 ease-linear transition font-bold text-white rounded-lg p-4 hover:bg-emerald-500 bg-emerald-400"
-							to="/"
-							style="text-align:center"
-						>Take me home</router-link>
-					</Box>
-				</Box>
-			</Box>
-		</template> <template #footer="">
-			<Footer></Footer>
-		</template>
-	</NotFound>
+	<Page>
+		<Section class="vp-intro" space="xlarge" align="center" height="half" gap="18px">
+			<Paragraph size="small" align="center" class="vp-eyebrow">404</Paragraph>
+			<Heading level="h1" size="xlarge" align="center">Page not found</Heading>
+			<Paragraph size="large" align="center" :muted="true" width="560px">We could not find what you were looking for. It may have moved, or the address may be mistyped.</Paragraph>
+			<Stack spread="center" gap="12px">
+				<Button href="/">Take me home</Button>
+				<Button href="/market" variant="outline">Browse the market</Button>
+			</Stack>
+		</Section>
+	</Page>
 </template>
 <script>
-	import NotFound from '@/_templates/arctic/views/NotFound.vue';
-	import Header from '@/components/Header.vue';
-	import Footer from '@/components/Footer.vue';
-	import Title from '@vueplayio/title';
-	import Box from '@vueplayio/box';
+	import Page from '@/components/Page.vue';
+	import Section from '@vueplayio/section';
+	import Heading from '@vueplayio/heading';
+	import Paragraph from '@vueplayio/paragraph';
+	import Stack from '@vueplayio/stack';
+	import Button from '@vueplayio/button';
+	import { pageHead } from '@/components/head.js';
 	export default {
 		components: {
-			NotFound: NotFound,
-			Title: Title,
-			Box: Box,
-			Header: Header,
-			Footer: Footer
+			Page,
+			Section,
+			Heading,
+			Paragraph,
+			Stack,
+			Button
 		},
-		data: () => ({})
+		head() {
+			return pageHead({
+				title: 'Page not found · Vue Play',
+				description: 'The page you were looking for is not on vueplay.com. It may have moved, or the address may be mistyped.',
+				noindex: true,
+				status: 404
+			});
+		}
 	};
 
 </script>
-<style scoped></style>

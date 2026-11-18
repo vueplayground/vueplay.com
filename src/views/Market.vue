@@ -1,228 +1,79 @@
 <template>
-	<Dashboard
-		headerHeight="96"
-		style="position:relative"
-	>
-		<template #header="">
-			<Header style="position: sticky; top: 0px; width: 100%"></Header>
-		</template> <template #sidebar="">
-			<Sidebar style="position:sticky; top: 0px; width: 100%"></Sidebar>
-		</template> <template #default="">
-			<Box
-				expand="{`default`:{`xs`:{`light`:true}}}"
-				justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-			>
-				<Box
-					contain="{`default`:{`xs`:{`light`:true}}}"
-					style="padding-bottom:100px"
-					column="{`default`:{`xs`:{`light`:true}}}"
-					marginTop="{`default`:{`xs`:{`light`:`40px`}}}"
-					paddingTop="{`default`:{`xs`:{`light`:`0px`}}}"
-					paddingBottom="{`default`:{`xs`:{`light`:`0px`}}}"
-					paddingRight="{`default`:{`lg`:{`light`:`40px`}}}"
-					paddingLeft="{`default`:{`lg`:{`light`:`40px`}}}"
-					marginBottom="{`default`:{`xs`:{`light`:`50px`}}}"
-				>
-					<Box
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						border="{`default`:{`xs`:{`light`:`1px solid #0002`}}}"
-						borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-						backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 0%, black)`}}}"
-					><input
-							v-model="term"
-							style="padding:13px 15px;font-size:22px;width:100%;background-color:transparent;border-radius:8px;"
-							:placeholder="`Search in category '${category}' ...`"
-						/> </Box>
-					<Box
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`60px`}}}"
-						gap="{`default`:{`xs`:{`light`:`30px`}}}"
-					>
-						<div
-							v-if="!components?.data?.length"
-							style="padding: 5px"
-						>
-							No results found.
-						</div><template v-for="component in components?.data || []">
-							<Box
-								backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`,`dark`:`color-mix(in oklch, var(--color-primary) 80%, black)`}},`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-primary) 80%, white)`,`dark`:`color-mix(in oklch, var(--color-primary) 70%, black)`}}}"
-								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-								borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-								@click="$router.push(`/market/${category || 'all'}/${component.slug}${component?.latest_version ? ('/' + component?.latest_version) : ''}`)"
-								column="{`default`:{`xs`:{`light`:true}}}"
-								flex="{`default`:{`xs`:{`light`:`0 0 calc((100% - 1 * 30px) / 2)`},`sm`:{`light`:`0 0 calc((100% - 1 * 30px) / 2)`},`lg`:{`light`:`0 0 calc((100% - 2 * 30px) / 3)`},`xl`:{`light`:`0 0 calc((100% - 3 * 30px) / 4)`}}}"
-								style="flex-grow:0;cursor:pointer;position:relative;transition:.2s linear all"
-								overflow="{`default`:{`xs`:{`light`:`hidden`}}}"
-								alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`14px`},`md`:{`light`:`18px`}}}"
-								v-if="component?.type !== 'vue-sfc' || component?.versions?.length"
-							>
-								<div style="width:100%;position:absolute;left:0px;bottom:0px;color:color-mix(in oklch, var(--color-primary) 40%, white)">
-									<div
-										style="padding:3px 6px;color:#fffcfcff;background-color:#00a6ffe6"
-										v-if="component?.price"
-									>{{ '$' + (component?.price / 100) }}.00</div>
-									<div style="padding:6px;background-color:color-mix(in oklch, var(--color-primary) 60%, black);text-align:center;text-transform:capitalize">{{ typeName(component?.type) }}</div>
-								</div>
-								<Title
-									style="width:100%;overflow:hidden;text-overflow:ellipsis;text-align:center;font-weight:500;max-height:27px;white-space:nowrap"
-									:title="component.title"
-								>{{component.title}} </Title>
-								<Title
-									style="width:100%;overflow:visible;text-align:center;font-weight:300;height:0px"
-									:title="component.title"
-								>{{component.latest_version}}</Title>
-								<Box
-									v-html="component?.icon?.startsWith('<svg') ? component.icon : '<div></div>'"
-									padding="{`default`:{`xs`:{`light`:`0px`}}}"
-									width="{`default`:{`xs`:{`light`:`80%`}}}"
-									style="aspect-ratio:16/9;background-size:cover;background-repeat:no-repeat;background-position:center"
-									overflow="{`default`:{`xs`:{`light`:`hidden`}}}"
-									justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-									alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-									:style="{
-backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + component.icon + ')'
-}"
-									v-if="component.icon"
-									margin="{`default`:{`xs`:{`light`:`30px 0px 40px`}}}"
-									borderRadius="{`default`:{`xs`:{`light`:`4px`}}}"
-								></Box>
-								<Box
-									padding="{`default`:{`xs`:{`light`:`0px`}}}"
-									width="{`default`:{`xs`:{`light`:`80%`}}}"
-									style="aspect-ratio:1/1;background-size:contain;background-repeat:no-repeat;background-position:center"
-									overflow="{`default`:{`xs`:{`light`:`hidden`}}}"
-									justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-									alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-									v-else-if="!component?.icon"
-									marginBottom="{`default`:{`xs`:{`light`:`20px`}}}"
-								><svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 32 32"
-										xml:space="preserve"
-										style="width:50%"
-										v-if="component?.type === 'vue-sfc'"
-									>
-										<path
-											d="m25.2 20.9-.7-.7 3.5-3.5-4.2-4.2-.7.7c-1.2 1.2-3.1 1.2-4.2 0-1.2-1.2-1.2-3.1 0-4.2l.7-.7L15.3 4l-3.5 3.5-.7-.7C9.9 5.6 8 5.6 6.8 6.8s-1.2 3.1 0 4.2l.7.7L4 15.3l4.2 4.2.7-.7c1.2-1.2 3.1-1.2 4.2 0 1.2 1.2 1.2 3.1 0 4.2l-.7.7 4.2 4.2 3.5-3.5.7.7c1.2 1.2 3.1 1.2 4.2 0 1.4-1.1 1.4-3 .2-4.2"
-											style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
-										/>
-									</svg><svg
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-										v-else-if="component?.type !== 'vue-sfc'"
-										style="width:40%"
-									>
-										<path
-											fill="none"
-											stroke="#fff"
-											stroke-width="2"
-											d="M1 3h22v18H1zm0 5h22M7 8v13"
-										/>
-									</svg></Box>
-							</Box>
-							<Box
-								backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-danger) 80%, white)`,`dark`:`color-mix(in oklch, var(--color-danger) 80%, white)`}},`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-danger) 60%, white)`,`dark`:`color-mix(in oklch, var(--color-danger) 90%, white)`}}}"
-								color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-								borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-								@click="$router.push(`/market/${category || 'all'}/${component.slug}${component?.latest_version ? ('/' + component?.latest_version) : ''}`)"
-								column="{`default`:{`xs`:{`light`:true}}}"
-								flex="{`default`:{`xs`:{`light`:`0 0 calc((100% - 1 * 30px) / 2)`},`sm`:{`light`:`0 0 calc((100% - 1 * 30px) / 2)`},`lg`:{`light`:`0 0 calc((100% - 2 * 30px) / 3)`},`xl`:{`light`:`0 0 calc((100% - 3 * 30px) / 4)`}}}"
-								style="flex-grow:0;cursor:pointer;position:relative;transition:.2s linear all"
-								overflow="{`default`:{`xs`:{`light`:`hidden`}}}"
-								alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`14px`},`md`:{`light`:`18px`}}}"
-								v-else-if="component?.type === 'vue-sfc' && !component?.versions?.length"
-							>
-								<div style="width:100%;position:absolute;left:0px;bottom:0px;color:color-mix(in oklch, var(--color-primary) 40%, white)">
-									<div
-										style="padding:3px 6px;background-color:var(--color-warning);color:#fffcfcff"
-										v-if="component?.price"
-									>{{ '$' + (component?.price / 100) }}.00</div>
-									<div style="padding:6px;background-color:color-mix(in oklch, var(--color-primary) 60%, black);text-align:center;text-transform:capitalize">{{ typeName(component?.type) }}</div>
-								</div>
-								<Title
-									style="width:100%;overflow:hidden;text-overflow:ellipsis;text-align:center;font-weight:500;max-height:27px;white-space:nowrap"
-									:title="component.title"
-								>{{component.title}}</Title>
-								<Box
-									v-html="component?.icon?.startsWith('<svg') ? component.icon : '<div></div>'"
-									padding="{`default`:{`xs`:{`light`:`0px`}}}"
-									width="{`default`:{`xs`:{`light`:`80%`}}}"
-									style="aspect-ratio:16/9;background-size:cover;background-repeat:no-repeat;background-position:center"
-									overflow="{`default`:{`xs`:{`light`:`hidden`}}}"
-									justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-									alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-									:style="{
-backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + component.icon + ')'
-}"
-									v-if="component.icon"
-									margin="{`default`:{`xs`:{`light`:`30px 0px 40px`}}}"
-									borderRadius="{`default`:{`xs`:{`light`:`4px`}}}"
-								></Box>
-								<Box
-									padding="{`default`:{`xs`:{`light`:`0px`}}}"
-									width="{`default`:{`xs`:{`light`:`80%`}}}"
-									style="aspect-ratio:1/1;background-size:contain;background-repeat:no-repeat;background-position:center"
-									overflow="{`default`:{`xs`:{`light`:`hidden`}}}"
-									justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-									alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-									v-else-if="!component?.icon"
-									marginBottom="{`default`:{`xs`:{`light`:`20px`}}}"
-								><svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 32 32"
-										xml:space="preserve"
-										style="width:50%"
-										v-if="component?.type === 'vue-sfc'"
-									>
-										<path
-											d="m25.2 20.9-.7-.7 3.5-3.5-4.2-4.2-.7.7c-1.2 1.2-3.1 1.2-4.2 0-1.2-1.2-1.2-3.1 0-4.2l.7-.7L15.3 4l-3.5 3.5-.7-.7C9.9 5.6 8 5.6 6.8 6.8s-1.2 3.1 0 4.2l.7.7L4 15.3l4.2 4.2.7-.7c1.2-1.2 3.1-1.2 4.2 0 1.2 1.2 1.2 3.1 0 4.2l-.7.7 4.2 4.2 3.5-3.5.7.7c1.2 1.2 3.1 1.2 4.2 0 1.4-1.1 1.4-3 .2-4.2"
-											style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
-										/>
-									</svg><svg
-										viewBox="0 0 24 24"
-										xmlns="http://www.w3.org/2000/svg"
-										v-else-if="component?.type !== 'vue-sfc'"
-										style="width:40%"
-									>
-										<path
-											fill="none"
-											stroke="#fff"
-											stroke-width="2"
-											d="M1 3h22v18H1zm0 5h22M7 8v13"
-										/>
-									</svg></Box>
-							</Box>
-						</template>
-					</Box>
-				</Box>
-			</Box>
-		</template> <template #footer="">
-			<Footer style="width: 100%"></Footer>
-		</template>
-	</Dashboard>
+	<Page>
+		<PageIntro :eyebrow="intro.eyebrow" :title="intro.title" :text="intro.text">
+			<div class="vp-market-search" role="search">
+				<svg class="vp-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
+				<input v-model="term" type="search" :placeholder="searchText" :aria-label="searchText" />
+			</div>
+			<MarketNav></MarketNav>
+		</PageIntro>
+		<Section space="small" gap="20px">
+			<p class="vp-market-count" aria-live="polite" data-allow-mismatch="">
+				<template v-if="!components">Loading…</template>
+				<template v-else>{{ shown.length }} {{ shown.length === 1 ? 'item' : 'items' }}{{ term ? ` for “${term}”` : '' }}</template>
+			</p>
+			<div v-if="components && !shown.length" class="vp-panel vp-panel--soft vp-market-empty">
+				<h2>No results found</h2>
+				<p>Try another word, or look in another category.</p>
+			</div>
+			<ul v-else class="vp-market-grid" data-allow-mismatch="children">
+				<li v-for="component in shown" :key="component.id || component.slug">
+					<MarketCard :component="component" :category="category"></MarketCard>
+				</li>
+			</ul>
+		</Section>
+		<Section space="medium" align="center" gap="14px">
+			<Heading level="h2" size="medium" align="center">Make your own and sell it</Heading>
+			<Paragraph :muted="true" align="center" width="560px">Build a component or a template in the Studio, give it a price, and publish it here.</Paragraph>
+			<Stack spread="center" gap="12px">
+				<Button href="https://studio.vueplay.com">Open the Studio</Button>
+				<Button href="/pricing" variant="outline">Pricing</Button>
+			</Stack>
+		</Section>
+	</Page>
 </template>
 <script>
-	import { useSSRContext } from 'vue'
-	import Link from '@vueplayio/link';
-	import Dashboard from '@/_templates/arctic/views/Dashboard.vue';
-	import Footer from '@/components/Footer.vue';
-	import Header from '@/components/Header.vue';
-	import Sidebar from '@/components/SidebarMarket.vue';
-	import Text from '@vueplayio/text';
-	import Title from '@vueplayio/title';
-	import Box from '@vueplayio/box';
+	import Page from '@/components/Page.vue';
+	import PageIntro from '@/components/PageIntro.vue';
+	import MarketNav from '@/components/SidebarMarket.vue';
+	import MarketCard from '@/components/MarketCard.vue';
+	import Section from '@vueplayio/section';
+	import Heading from '@vueplayio/heading';
+	import Paragraph from '@vueplayio/paragraph';
+	import Stack from '@vueplayio/stack';
+	import Button from '@vueplayio/button';
+	import { pageHead } from '@/components/head.js';
+	// What each category is called and says; the ones under "Yours" and "Admin" are private
+	const CATEGORIES = {
+		all: ['Market', 'Vue Play Market', 'Components and templates made in Vue Play Studio, ready to drop into your site or to start a new one from.'],
+		components: ['Market', 'Vue components', 'Components to drop into any Vue site: install them with npm, or drag them in in Vue Play Studio.'],
+		templates: ['Market', 'Vue templates', 'Whole sites to start from, with their pages, pictures and look. Open one in the Studio and change everything.'],
+		priced: ['Market', 'Premium components and templates', 'Components and templates sold by their makers in the Vue Play Market.'],
+		me: ['Yours', 'Your market items', 'Everything you make or take part in.'],
+		purchases: ['Yours', 'Your purchases', 'What you have bought in the Market.'],
+		private: ['Yours', 'Your private items', 'Items only you and your teams can see.'],
+		published: ['Yours', 'Your published items', 'Your items that are in the Market.'],
+		'in-review': ['Yours', 'Your items in review', 'Your items waiting to be published.'],
+		hidden: ['Yours', 'Your hidden items', 'Your items that are not listed.'],
+		archived: ['Yours', 'Your archived items', 'Your items that are archived.'],
+		'published-all': ['Admin', 'Published items', 'Everything that is published.'],
+		'in-review-all': ['Admin', 'Items in review', 'Everything waiting to be published.'],
+		'private-all': ['Admin', 'Private items', 'Everything that is private.'],
+		'hidden-all': ['Admin', 'Hidden items', 'Everything that is hidden.'],
+		'archived-all': ['Admin', 'Archived items', 'Everything that is archived.']
+	};
+	const PUBLIC = ['all', 'components', 'templates', 'priced'];
 	export default {
 		components: {
-			Link: Link,
-			Text: Text,
-			Dashboard: Dashboard,
-			Title: Title,
-			Box: Box,
-			Footer: Footer,
-			Header: Header,
-			Sidebar: Sidebar
+			Page,
+			PageIntro,
+			MarketNav,
+			MarketCard,
+			Section,
+			Heading,
+			Paragraph,
+			Stack,
+			Button
 		},
 		props: {
 			category: {
@@ -244,7 +95,9 @@ backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + compo
 		},
 		watch: {
 			async category() {
-				await this.getComponents();
+				// (a search typed in goes on in the next category)
+				if (this.term) await this.search();
+				else await this.getComponents();
 			},
 			async term() {
 				await this.search();
@@ -255,15 +108,19 @@ backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + compo
 				if (this.category === 'components') return 'vue-sfc';
 				if (this.category === 'templates') return 'vue-template';
 				return '';
+			},
+			intro() {
+				const [eyebrow, title, text] = CATEGORIES[this.category] || [`Market`, `Market: ${this.category}`, ''];
+				return { eyebrow, title, text };
+			},
+			searchText() {
+				return this.category === 'all' ? 'Search the Market' : `Search in ${this.intro.title.toLowerCase()}`;
+			},
+			shown() {
+				return this.components?.data || [];
 			}
 		},
 		methods: {
-			typeName(type) {
-				if (type === 'vue-sfc') return 'component';
-				if (type === 'vue-app') return 'application';
-				if (type === 'vue-template') return 'template';
-				return type;
-			},
 			async getComponents() {
 				if (this.account) return this.search();
 				let query = 'https://manager.vueplay.io/applications?$limit=1000&public=true&published=true&hidden=false&$sort[updated_at]=-1';
@@ -397,65 +254,106 @@ backgroundImage: component.icon?.startsWith('<svg') ? undefined : 'url(' + compo
 			}
 		},
 		head() {
-			const baseUrl = "https://vueplay.com";
-			const imageUrl = `${baseUrl}/screenshot.png`; // Using the provided image URL
-
-			let title = "Vue Play Market";
-			let description = "Explore and discover a wide range of Vue components and applications on the Vue Play Market.";
-			let currentUrl = `${baseUrl}/market`;
-
-			// Customize title and description based on category
-			if (this.category && this.category !== 'all') {
-				const categoryName = this.typeName(this.type || this.category);
-				title = `Vue Play Market - ${categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}s`;
-				description = `Browse ${categoryName}s on the Vue Play Market. Find the perfect ${categoryName} for your next Vue project.`;
-				currentUrl = `${baseUrl}/market/${this.category}`;
-			}
-
-			// Add search term to description if present
-			if (this.term) {
-				description += ` Search results for "${this.term}".`;
-			}
-
-			return {
-				title: title,
-				meta: [{
-					name: 'description',
-					content: description
-				}, {
-					property: 'og:title',
-					content: title
-				}, {
-					property: 'og:description',
-					content: description
-				}, {
-					property: 'og:type',
-					content: 'website'
-				}, {
-					property: 'og:url',
-					content: currentUrl
-				}, {
-					property: 'og:image',
-					content: imageUrl
-				}, {
-					name: 'twitter:card',
-					content: 'summary_large_image'
-				}, {
-					name: 'twitter:title',
-					content: title
-				}, {
-					name: 'twitter:description',
-					content: description
-				}, {
-					name: 'twitter:image',
-					content: imageUrl
-				}],
-				link: [{
-					rel: 'canonical',
-					href: currentUrl
-				}]
+			const listed = PUBLIC.includes(this.category);
+			const path = this.category === 'all' ? '/market' : `/market/${this.category}`;
+			const titles = {
+				all: 'Vue Play Market: Vue components and templates',
+				components: 'Vue components · Vue Play Market',
+				templates: 'Vue templates · Vue Play Market',
+				priced: 'Premium components and templates · Vue Play Market'
 			};
+			const descriptions = {
+				all: 'Browse Vue components and whole-site templates made in Vue Play Studio. Install them with npm, or start a new site from a template.',
+				components: 'Vue components made in Vue Play Studio: install them with npm, embed them from a CDN, or drag them into your site in the Studio.',
+				templates: 'Vue templates made in Vue Play Studio: whole sites with pages, pictures and a look of their own. Open one and change everything.',
+				priced: 'Premium Vue components and templates sold by their makers in the Vue Play Market, with a preview of each before you buy.'
+			};
+			if (!listed) return pageHead({
+				title: `${this.intro.title} · Vue Play Market`,
+				description: 'Your Vue Play Market items: what you make, publish, keep private, archive and buy in the Vue Play Market.',
+				noindex: true
+			});
+			return pageHead({
+				title: titles[this.category],
+				description: descriptions[this.category],
+				path
+			});
 		}
 	};
 
 </script>
+<style>
+	.vp-market-search {
+		position: relative;
+		width: 100%;
+		max-width: 36rem;
+		margin-top: 0.5rem;
+	}
+
+	.vp-market-search svg {
+		position: absolute;
+		top: 50%;
+		left: 1.1rem;
+		width: 1.2rem !important;
+		height: 1.2rem !important;
+		transform: translateY(-50%);
+		color: var(--vp-muted);
+		pointer-events: none;
+	}
+
+	.vp-market-search input {
+		box-sizing: border-box;
+		width: 100%;
+		height: 3.25rem;
+		padding: 0 1.25rem 0 3rem;
+		border: 1px solid var(--vp-border);
+		border-radius: 999px;
+		background: var(--vp-background);
+		color: var(--vp-text);
+		font: inherit;
+		font-size: 1.0625rem;
+		box-shadow: 0 10px 30px -18px rgba(6, 40, 30, 0.35);
+		transition: border-color 140ms ease, box-shadow 140ms ease;
+	}
+
+	.vp-market-search input:focus {
+		border-color: var(--vp-primary);
+		outline: none;
+		box-shadow: 0 0 0 4px color-mix(in oklch, var(--vp-primary) 20%, transparent);
+	}
+
+	.vp-market-count {
+		margin: 0;
+		color: var(--vp-muted);
+		font-size: 0.9375rem;
+	}
+
+	.vp-market-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+		gap: 22px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.vp-market-grid>li {
+		display: flex;
+	}
+
+	.vp-market-empty {
+		text-align: center;
+	}
+
+	.vp-market-empty h2 {
+		margin: 0 0 0.25rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	.vp-market-empty p {
+		margin: 0;
+		color: var(--vp-muted);
+	}
+
+</style>

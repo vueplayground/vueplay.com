@@ -1,18 +1,28 @@
 <template>
 	<button
-		style="position: relative; opacity: .8; transition: all .3s linear; width: 34px; height: 17px; box-sizing: border-box; border-radius: 50px; overflow: hidden;"
+		type="button"
+		class="vp-theme-switch"
+		data-allow-mismatch=""
+		:title="label"
+		:aria-label="label"
 		@click.stop="toggle"
-		:class="{
-			dark: storedTheme === 'dark',
-			light: storedTheme === 'light'
-		}"
-		:style="{ backgroundColor }"
 	>
-		<div
-			:style="{ backgroundColor: backgroundColorSwitch, left }"
-			style="position: absolute; width: calc((100% / 3) + 4px); aspect-ratio: 1/1; rounded: 50%; box-sizing: border-box; top: 1px; border-radius: 50%; transition: all .3s linear;"></div>
-	</button> </template>
+		<svg v-if="storedTheme === 'light'" viewBox="0 0 24 24" aria-hidden="true">
+			<circle cx="12" cy="12" r="4" />
+			<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+		</svg>
+		<svg v-else-if="storedTheme === 'dark'" viewBox="0 0 24 24" aria-hidden="true">
+			<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+		</svg>
+		<svg v-else viewBox="0 0 24 24" aria-hidden="true">
+			<rect x="3" y="4" width="18" height="12" rx="2" />
+			<path d="M8 20h8M12 16v4" />
+		</svg>
+		<span class="vp-theme-switch__text">{{ text }}</span>
+	</button>
+</template>
 <script>
+	// Light, the device's own choice, or dark: one press goes to the next.
 	export default {
 		data: () => ({
 			storedTheme: typeof global !== 'undefined' ? global?.theme : null
@@ -27,18 +37,14 @@
 			}
 		},
 		computed: {
-			backgroundColor() {
-				if (this.theme === 'dark') return 'rgba(0, 0, 0, 0.8)'
-				return 'rgba(255, 255, 255, 0.8)'
+			text() {
+				if (this.storedTheme === 'dark') return 'Dark';
+				if (this.storedTheme === 'light') return 'Light';
+				return 'As the device';
 			},
-			backgroundColorSwitch() {
-				if (this.theme === 'dark') return 'rgba(255, 255, 255, 0.7)'
-				return 'rgba(0, 0, 0, 0.5)'
-			},
-			left() {
-				if (this.storedTheme === 'dark') return 'calc(100% - calc(100% / 3) - 5px)'
-				if (this.storedTheme === 'light') return '1px'
-				return 'calc(50% - (100% / 3 / 2) - 2px)'
+			label() {
+				const next = this.storedTheme === 'dark' ? 'light' : this.storedTheme === 'light' ? 'as the device' : 'dark';
+				return `Theme: ${this.text.toLowerCase()}. Switch to ${next}`;
 			}
 		},
 		methods: {
@@ -50,13 +56,57 @@
 				} else {
 					this.updateTheme('dark');
 				}
+				this.storedTheme = localStorage.getItem('theme');
 			}
 		}
 	};
 
 </script>
-<style scoped>
-	button:hover {
-		opacity: 1!important;
+<style>
+	.vp-theme-switch {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		width: 2.375rem;
+		height: 2.375rem;
+		padding: 0;
+		border: 0;
+		border-radius: 999px;
+		background: none;
+		color: color-mix(in oklch, currentColor 74%, transparent);
+		cursor: pointer;
+		transition: background-color 140ms ease, color 140ms ease;
 	}
+
+	.vp-theme-switch:hover {
+		background: color-mix(in oklch, currentColor 8%, transparent);
+		color: inherit;
+	}
+
+	.vp-theme-switch:focus-visible {
+		outline: 2px solid var(--vp-primary, #10a37c);
+		outline-offset: 2px;
+	}
+
+	.vp-theme-switch svg {
+		flex: none;
+		width: 1.15rem;
+		height: 1.15rem;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.8;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.vp-theme-switch__text {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+
 </style>

@@ -1,535 +1,393 @@
 <template>
-	<Home>
-		<template #header>
-			<Header style="position: sticky; top: 0px;z-index:1"></Header>
-		</template>
-		<template #default>
-			<Box
-				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
-				expand="true"
-			>
-				<Box
-					contain="{`default`:{`xs`:{`light`:true}}}"
-					column="{`default`:{`xs`:{`light`:true}}}"
-					paddingTop="{`default`:{`xs`:{`light`:`100px`}}}"
-					alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-					overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-				>
-					<Title
-						style="text-align:center;max-width:800px"
-						fontSize="{`default`:{`xs`:{`light`:`45px`},`sm`:{`light`:`60px`},`md`:{`light`:`70px`},`lg`:{`light`:`88px`}}}"
-						type="{`default`:{`xs`:{`light`:`h1`},`2xl`:{`light`:`h1`}}}"
-						lineHeight="{`default`:{`xs`:{`light`:`47px`},`sm`:{`light`:`67px`},`md`:{`light`:`72px`},`lg`:{`light`:`96px`}}}"
-						fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-					>Build Visually,
-						<br />Create Anything
-					</Title>
-					<Title
-						style="text-align:center"
-						type="{`default`:{`xs`:{`light`:`h2`},`2xl`:{`light`:`h2`}}}"
-						fontSize="{`default`:{`xs`:{`light`:`16px`},`md`:{`light`:`18px`},`lg`:{`light`:`20px`}}}"
-						lineHeight="{`default`:{`xs`:{`light`:`25px`},`md`:{`light`:`28px`},`lg`:{`light`:`30px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`25px`}}}"
-						fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-					>Design, develop & launch websites, apps, components, and more —
-						<br />rediscover the joy of building, from syntax to creativity.
-					</Title>
-					<Link
-						title="Get Started"
-						backgroundColor="{`hover`:{`xs`:{`dark`:`color-mix(in oklch, var(--color-primary) 60%, black)`}}}"
-						padding="{`default`:{`xs`:{`light`:`12px 15px`},`lg`:{`light`:`15px 25px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`50px`}}}"
-						color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-						borderRadius="{`default`:{`xs`:{`light`:`50px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`80px`}}}"
-						style="background-image:linear-gradient(60deg, var(--color-primary), #4e6d8aff);transition:.15s linear all"
-						external="true"
-						target="_blank"
-						route="https://studio.vueplay.com"
-						justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-						width="{`default`:{`xs`:{`light`:`200px`},`lg`:{`light`:`250px`}}}"
-						fontSize="{`default`:{`xs`:{`light`:`22px`},`lg`:{`light`:`26px`}}}"
-						class="shadow-xl"
-						icon="{`default`:{`xs`:{`light`:`--image-play-svg`}}}"
-						iconReverse="true"
-						iconSize="20px"
-						filter="{`hover`:{`xs`:{`light`:`contrast(115%)`}}}"
-						border="{`default`:{`xs`:{`light`:`4px solid`}}}"
-						borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}},`hover`:{`xs`:{`light`:`#031b2bff`,`dark`:`#1e3b4dff`}}}"
-						transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(.97)`}}}"
-					>
-					</Link>
-					<Box
-						gap="{`default`:{`xs`:{`light`:`25px`}}}"
-						justifyContent="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`space-between`}}}"
-						flexWrap="{`default`:{`md`:{`light`:`nowrap`}}}"
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-					>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`30px`}}}"
-							color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							style="max-width:350px;background-image:var(--image-brushed-alum-png);transition:all .2s linear"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}}}"
-							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`#c940ffff`}}}"
-							class="shadow-xl"
-							transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(1.05)`}}}"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="w-10 h-10"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<Title
-								type="{`default`:{`xs`:{`light`:`h3`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`20px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
-								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
-								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								style="color:#f8d2fcff;text-shadow:1px 2px 1px #171616ff"
-							>Design</Title>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-								style="text-align:center"
-							>Build stunning UIs with drag & drop, style controls, and precision.</Text>
-						</Box>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`30px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`}}}"
-							color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							style="max-width:350px;background-image:var(--image-brushed-alum-png);transition:all .2s linear"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}}}"
-							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
-							class="shadow-xl"
-							transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(1.05)`}}}"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="w-10 h-10 -ml-1"
-							>
-								<path d="M18.75 12.75h1.5a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5zM12 6a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 0112 6zM12 18a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 0112 18zM3.75 6.75h1.5a.75.75 0 100-1.5h-1.5a.75.75 0 000 1.5zM5.25 18.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 010 1.5zM3 12a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 013 12zM9 3.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zM12.75 12a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0zM9 15.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
-							</svg>
-							<Title
-								type="{`default`:{`xs`:{`light`:`h3`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`20px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
-								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
-								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								style="color:#e1faf4ff;text-shadow:1px 2px 1px #171616ff"
-							>Develop</Title>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-								style="text-align:center"
-							>Develop with ease — from props to logic to layout.</Text>
-						</Box>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`30px`}}}"
-							backgroundColor="{`default`:{`xs`:{`light`:`#f2340fff`}}}"
-							color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							style="max-width:350px;background-image:var(--image-brushed-alum-png);transition:all .2s linear"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							borderColor="{`default`:{`xs`:{`light`:`#1e3b4dff`,`dark`:`#021624ff`}}}"
-							borderWidth="{`default`:{`xs`:{`light`:`4px`}}}"
-							class="shadow-xl"
-							transform="{`default`:{`xs`:{`light`:`scale(1)`}},`hover`:{`xs`:{`light`:`scale(1.05)`}}}"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="w-10 h-10"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
-									clip-rule="evenodd"
-								/>
-								<path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
-							</svg>
-							<Title
-								type="{`default`:{`xs`:{`light`:`h3`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`20px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`600`}}}"
-								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
-								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								style="color:#fceae6ff;text-shadow:1px 2px 1px #171616ff"
-							>Launch</Title>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-								style="text-align:center"
-							>Launch with a click — preview, build, and go live.</Text>
-						</Box>
-					</Box>
-					<Box
-						marginTop="{`default`:{`xs`:{`light`:`80px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`100px`}}}"
-						backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 15%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 20%, black)`}}}"
-						borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-					>
-						<Box
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-							gap="{`default`:{`xs`:{`light`:`8px`}}}"
-							marginBottom="{`default`:{`xs`:{`light`:`15px`}}}"
-							marginLeft="{`default`:{`xs`:{`light`:`1px`}}}"
-						>
-							<Box
-								backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 40%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 60%, black)`}}}"
-								borderRadius="{`default`:{`xs`:{`light`:`50%`}}}"
-								padding="{`default`:{`xs`:{`light`:`5px`}}}"
-								border="{`default`:{`xs`:{`light`:`1px solid`}}}"
-								borderColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 60%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 60%, black)`}}}"
-							>
-								<div></div>
-							</Box>
-							<Box
-								backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 40%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 60%, black)`}}}"
-								borderRadius="{`default`:{`xs`:{`light`:`50%`}}}"
-								padding="{`default`:{`xs`:{`light`:`5px`}}}"
-								border="{`default`:{`xs`:{`light`:`1px solid`}}}"
-								borderColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 60%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 60%, black)`}}}"
-							>
-								<div></div>
-							</Box>
-							<Box
-								backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 40%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 60%, black)`}}}"
-								borderRadius="{`default`:{`xs`:{`light`:`50%`}}}"
-								padding="{`default`:{`xs`:{`light`:`5px`}}}"
-								border="{`default`:{`xs`:{`light`:`1px solid`}}}"
-								borderColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 60%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 60%, black)`}}}"
-							>
-								<div></div>
-							</Box>
-						</Box>
-						<img
-							src="@/assets/screenshot.webp"
-							style="border-radius:3px"
-						/>
-					</Box>
-					<Box
-						gap="{`default`:{`xs`:{`light`:`50px`}}}"
-						justifyContent="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`space-between`}}}"
-						flexWrap="{`default`:{`md`:{`light`:`nowrap`}}}"
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`50px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`30px`}}}"
-						width="{`default`:{`xs`:{`light`:`100%`}}}"
-					>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-							:title="usersCount + ' registered users'"
-						>
-							<Title
-								type="{`default`:{`xs`:{`light`:`h3`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`60px`},`lg`:{`light`:`80px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
-								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`100px`}}}"
-							>{{formatCount(usersCount)}}</Title>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-								style="text-align:center"
-							>Registered users</Text>
-						</Box>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-							:title="websitesCount + ' websites'"
-						>
-							<Title
-								type="{`default`:{`xs`:{`light`:`h3`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`60px`},`lg`:{`light`:`80px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
-								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`100px`}}}"
-							>{{formatCount(websitesCount)}}</Title>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-								style="text-align:center"
-							>Websites built</Text>
-						</Box>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-							:title="componentsCount + ' components'"
-						>
-							<Title
-								type="{`default`:{`xs`:{`light`:`h3`}}}"
-								fontSize="{`default`:{`xs`:{`light`:`60px`},`lg`:{`light`:`80px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-								marginTop="{`default`:{`xs`:{`light`:`12px`}}}"
-								marginBottom="{`default`:{`xs`:{`light`:`12px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`100px`}}}"
-							>{{formatCount(componentsCount)}}</Title>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								lineHeight="{`default`:{`xs`:{`light`:`25px`}}}"
-								fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-								style="text-align:center"
-							>Components crafted</Text>
-						</Box>
-					</Box>
-					<Box
-						gap="{`default`:{`xs`:{`light`:`50px`}}}"
-						justifyContent="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`space-between`}}}"
-						flexWrap="{`default`:{`md`:{`light`:`nowrap`}}}"
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`50px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`50px`}}}"
-						width="{`default`:{`xs`:{`light`:`100%`}}}"
-					>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						>
-							<a
-								class="bg-slate-50 hover:bg-slate-100 rounded-lg"
-								style="width:250px;display:block;border:1px;border-style:solid;border-color:#333;color:#333;margin-left:auto;margin-right:auto"
-								href="https://github.com/marketplace/vue-play-studio"
-								target="_blank"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="40"
-									height="40"
-									viewBox="0 0 24 24"
-									style="float:left;padding:5px 0px 5px 12px"
-									class="mt-1"
-								>
-									<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-								</svg>
-								<span style="padding-top:13px;display:inline-block;font-weight:bold;padding-bottom:12px;margin-left:20px">
-									GitHub marketplace
-								</span>
-							</a>
-						</Box>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						>
-							<a
-								href="https://www.producthunt.com/products/vueplay?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-vue&#0045;play&#0045;2"
-								target="_blank"
-							>
-								<img
-									src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=416946&theme=light&t=1752143504408"
-									alt="Vue&#0032;Play - Create&#0032;Vue&#0032;Applications&#0032;using&#0032;a&#0032;Visual&#0032;Designer | Product Hunt"
-									style="width: 250px; height: 54px;;margin:auto"
-									width="250"
-									height="54"
-								/>
-							</a>
-						</Box>
-					</Box>
-					<Box
-						gap="{`default`:{`xs`:{`light`:`50px`}}}"
-						justifyContent="{`default`:{`xs`:{`light`:`center`},`md`:{`light`:`space-between`}}}"
-						flexWrap="{`default`:{`md`:{`light`:`nowrap`}}}"
-						padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`150px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`30px`}}}"
-						width="{`default`:{`xs`:{`light`:`100%`}}}"
-					>
-						<Box
-							borderRadius="{`default`:{`xs`:{`light`:`8px`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-							width="{`default`:{`xs`:{`light`:`100%`},`md`:{`light`:`auto`}}}"
-							flex="{`default`:{`md`:{`light`:`1 1 0`}}}"
-							alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-							overflow="{`default`:{`xs`:{`light`:`visible`}}}"
-							padding="{`default`:{`xs`:{`light`:`0px`}}}"
-						>
-							<a
-								href="https://madewithvuejs.com/p/vue-play/shield-link"
-								target="_blank"
-								class="inline-block mx-auto"
-								data-allow-mismatch
-							>
-								<img src="https://madewithvuejs.com/storage/repo-shields/4476-shield.svg" />
-							</a>
-						</Box>
-					</Box>
-				</Box>
-			</Box>
-		</template>
-		<template #footer>
-			<Footer></Footer>
-		</template>
-	</Home>
+  <div class="vp-home">
+    <Header style="position:sticky;top:0px;z-index:50"></Header>
+    <main>
+      <Backdrop kind="aurora" tone="light" color1="#10a37c" color2="#17e8c2" color3="#00a6ff" motion="calm" space="large" align="center" gap="26px" width="wide">
+        <a class="vp-home-pill" href="/release-log"><span class="vp-home-pill__tag">New</span> The new Vue Play is here · see what changed</a>
+        <Heading level="h1" size="huge" align="center">One editor for <span class="vp-home-grad">everyone who builds with Vue</span></Heading>
+        <Paragraph size="large" align="center" :muted="true" width="700px">Designers, developers and AI working on the same code. Vue Play Studio is a visual editor that makes a real Vue project with Git, one you own and can take with you.</Paragraph>
+        <Stack spread="center" gap="12px">
+          <Button href="https://studio.vueplay.com" size="large">Start building, free</Button>
+          <Button href="#templates" size="large" variant="outline">See the templates</Button>
+        </Stack>
+        <p class="vp-home-vue">
+          <a class="vp-home-vue__made" href="https://vuejs.org" target="_blank" rel="noopener"><svg class="vp-home-vue__logo" viewBox="0 0 261.76 226.69" role="img" aria-label="Vue"><path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#41b883"/><path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" class="vp-home-vue__inner" fill="#34495e"/></svg><span>Built for <b>Vue 3</b></span></a>
+          <span class="vp-home-vue__dot" aria-hidden="true">·</span><span>Runs in the browser</span>
+          <span class="vp-home-vue__dot" aria-hidden="true">·</span><span>Free to start</span>
+          <span class="vp-home-vue__dot" aria-hidden="true">·</span><span>Export your code whenever you like</span>
+        </p>
+        <figure class="vp-home-shot vp-home-shot--hero" style="--shot: url(/landing/studio-design.png)">
+          <div class="vp-home-shot__bar"><i></i><i></i><i></i><span>Vue Play Studio · Design</span></div>
+          <div class="vp-home-shot__screen" role="img" aria-label="The Design view of Vue Play Studio: the page large in the middle, parts to add on the left, settings on the right"><span class="vp-home-shot__name">Design view</span></div>
+        </figure>
+      </Backdrop>
+      <Section space="medium">
+        <Columns :columns="4" min="150px" gap="24px">
+          <Stat value="8" label="views of one editor" />
+          <Stat value="17" label="templates to start from" />
+          <Stat value="60+" label="components in the library" />
+          <Stat value="1 click" label="to publish your site" />
+        </Columns>
+      </Section>
+      <Section space="small" class="vp-home-vueband">
+        <div class="vp-home-vueband__in">
+          <svg class="vp-home-vueband__logo" viewBox="0 0 261.76 226.69" role="img" aria-label="The Vue logo"><path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#41b883"/><path class="vp-home-vue__inner" d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#34495e"/></svg>
+          <div>
+            <p class="vp-home-vueband__title">Made with Vue, for Vue</p>
+            <p class="vp-home-vueband__text">Every site you make is a Vue 3 project of single-file components and Vue Router: the same code the Vue community writes, ready for any Vue developer to pick up.</p>
+          </div>
+          <a class="vp-home-vueband__link" href="https://vuejs.org" target="_blank" rel="noopener">About Vue ↗</a>
+        </div>
+      </Section>
+      <Section anchor="views" background="var(--vp-surface)" gap="32px">
+        <Stack direction="column" align="center" spread="center" gap="14px">
+          <Paragraph size="small" align="center" class="vp-home-eyebrow">Views</Paragraph>
+          <Heading level="h2" size="xlarge" align="center">The editor arranges itself for how you work</Heading>
+          <Paragraph size="large" align="center" :muted="true" width="680px">Pick a view and the Studio shows the panels for that job. The project and the code stay the same, so a designer, a developer and an agent can work on one site without handing files back and forth.</Paragraph>
+        </Stack>
+        <Columns :columns="3" gap="20px" min="260px">
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="academic-cap" title="Learn" text="The page above its code, with a tutor that explains what you click." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="paint-brush" title="Design" text="The page large, with parts to add, words, pictures, style and the look of the site." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="sparkles" title="Animate" text="A timeline under the page and keyframes that play when the page opens or as it scrolls into view." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="code-bracket" title="Develop" text="The code beside the page, with the files, Git and packages." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="server" title="Backend" text="Connect the site to data and services: sources, bindings, logic and files." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="cpu-chip" title="Agent" text="The AI chat beside the page. Ask for a change, watch it happen, check it in Git." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="document-text" title="Content" text="For clients who keep a site up to date: pages, words and pictures, no layout tools." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="puzzle-piece" title="Everything" text="Every panel in its usual place, for when you want it all." /></Card>
+          <Card look="outline" padding="28px" background="var(--vp-background)"><Feature icon="cursor-arrow-rays" title="Your own" text="Move, dock and tab any panel, then save the layout as a view of your own." /></Card>
+        </Columns>
+      </Section>
+      <Section anchor="inside" gap="32px">
+        <Stack direction="column" align="center" spread="center" gap="14px">
+          <Paragraph size="small" align="center" class="vp-home-eyebrow">What is inside</Paragraph>
+          <Heading level="h2" size="xlarge" align="center">Everything a Vue site needs, in one place</Heading>
+          <Paragraph size="large" align="center" :muted="true" width="680px">Point at a card to see it lean, and open one for the whole story.</Paragraph>
+        </Stack>
+        <Columns :columns="4" gap="20px" min="230px">
+          <TiltCard v-for="one in features" :key="one.path" look="shadow" tilt="10deg" depth="28px" class="vp-home-inside">
+            <Feature :icon="one.icon" :title="one.name" :text="one.text" />
+            <router-link :to="one.path" class="vp-home-inside__go">{{ one.name }} in detail →</router-link>
+          </TiltCard>
+        </Columns>
+      </Section>
+      <Section anchor="templates" width="full" gap="28px">
+        <Stack direction="column" align="center" spread="center" gap="14px">
+          <Paragraph size="small" align="center" class="vp-home-eyebrow">Templates</Paragraph>
+          <Heading level="h2" size="xlarge" align="center">Start from one of 17 templates</Heading>
+          <Paragraph size="large" align="center" :muted="true" width="680px">Each one is a whole site with its pages, pictures and look, built from the same components you edit. Pick one and change everything.</Paragraph>
+        </Stack>
+        <Marquee :seconds="70" gap="24px" label="Templates" class="vp-home-tiles">
+          <Image src="/landing/templates/landing-page.jpg" alt="The Landing Page template" shape="16 / 10" radius="14px" caption="Landing page" class="vp-home-tile" />
+          <Image src="/landing/templates/agency.jpg" alt="The Agency template" shape="16 / 10" radius="14px" caption="Agency" class="vp-home-tile" />
+          <Image src="/landing/templates/portfolio-starter.jpg" alt="The Portfolio template" shape="16 / 10" radius="14px" caption="Portfolio" class="vp-home-tile" />
+          <Image src="/landing/templates/blog-starter.jpg" alt="The Blog template" shape="16 / 10" radius="14px" caption="Blog" class="vp-home-tile" />
+          <Image src="/landing/templates/ai-chat.jpg" alt="The AI Chat template" shape="16 / 10" radius="14px" caption="AI chat" class="vp-home-tile" />
+          <Image src="/landing/templates/marketplace.jpg" alt="The Marketplace template" shape="16 / 10" radius="14px" caption="Marketplace" class="vp-home-tile" />
+          <Image src="/landing/templates/webshop.jpg" alt="The Webshop template" shape="16 / 10" radius="14px" caption="Webshop" class="vp-home-tile" />
+          <Image src="/landing/templates/restaurant.jpg" alt="The Restaurant template" shape="16 / 10" radius="14px" caption="Restaurant" class="vp-home-tile" />
+          <Image src="/landing/templates/event.jpg" alt="The Event template" shape="16 / 10" radius="14px" caption="Event" class="vp-home-tile" />
+        </Marquee>
+        <Marquee :seconds="64" gap="24px" direction="right" label="More templates" class="vp-home-tiles">
+          <Image src="/landing/templates/cv-starter.jpg" alt="The CV template" shape="16 / 10" radius="14px" caption="CV" class="vp-home-tile" />
+          <Image src="/landing/templates/link-page.jpg" alt="The Link Page template" shape="16 / 10" radius="14px" caption="Link page" class="vp-home-tile" />
+          <Image src="/landing/templates/services.jpg" alt="The Services template" shape="16 / 10" radius="14px" caption="Services" class="vp-home-tile" />
+          <Image src="/landing/templates/documentation.jpg" alt="The Documentation template" shape="16 / 10" radius="14px" caption="Documentation" class="vp-home-tile" />
+          <Image src="/landing/templates/non-profit.jpg" alt="The Non-profit template" shape="16 / 10" radius="14px" caption="Non-profit" class="vp-home-tile" />
+          <Image src="/landing/templates/admin-dashboard.jpg" alt="The Admin Dashboard template" shape="16 / 10" radius="14px" caption="Admin dashboard" class="vp-home-tile" />
+          <Image src="/landing/templates/shop-admin-starter.jpg" alt="The Shop Admin template" shape="16 / 10" radius="14px" caption="Shop admin" class="vp-home-tile" />
+          <Image src="/landing/templates/helpdesk.jpg" alt="The Help Desk template" shape="16 / 10" radius="14px" caption="Help desk" class="vp-home-tile" />
+        </Marquee>
+        <Stack spread="center">
+          <Button href="https://studio.vueplay.com" size="large">Pick a template</Button>
+        </Stack>
+      </Section>
+      <FloatingShapes look="night" color1="#17e8c2" color2="#00a6ff" height="520px" class="vp-home-3d">
+        <Paragraph size="small" align="center" class="vp-home-eyebrow vp-home-eyebrow--light">New in the library</Paragraph>
+        <Heading level="h2" size="xlarge" align="center" color="#ffffff">3D, without writing a line of it</Heading>
+        <Paragraph size="large" align="center" width="640px" color="rgba(255,255,255,.8)">Tilt cards, flip cards, a ring of pictures, a spinning cube, deep 3D text, floating shapes like these and a globe. Drop them on a page and pick their settings. Move your pointer here.</Paragraph>
+        <Button href="/market/components" size="large" color="#17e8c2" textColor="#04161a">See the 3D components</Button>
+      </FloatingShapes>
+      <Section anchor="questions" width="narrow" gap="28px">
+        <Heading level="h2" size="xlarge" align="center">Questions and answers</Heading>
+        <Accordion :faq="true" :items="[{ title: 'Can I start for free?', text: 'Yes. Open the Studio, pick a template and start building. The pricing page shows what each plan includes.' }, { title: 'Do I own what I build?', text: 'Yes. Every project is a Vue project in a Git repository. You can export it and run it anywhere Vue runs.' }, { title: 'Do I need to know Vue?', text: 'No. You can build with the canvas, the templates and the AI chat. When you want to know how it works, the Learn view explains the code behind what you click.' }, { title: 'Can developers work in the same project?', text: 'Yes. The Develop view has the code, the files, Git and packages from npm. Code you write shows on the canvas, and what is changed on the canvas is written as code.' }, { title: 'Which AI does the chat use?', text: 'The chat in the editor is free for everyone who is signed in and runs on Vue Play’s own servers. You can also connect a model that runs on your own machine.' }, { title: 'Is Vue Play good for teaching?', text: 'Yes. The Learn view was made for beginners and classes: it runs in the browser, explains Vue as students click, and has small tasks that check themselves.' }]" />
+      </Section>
+      <Backdrop kind="mesh" tone="brand" color1="#10a37c" color2="#0b7a5c" color3="#17e8c2" motion="calm" space="large" align="center" gap="22px">
+        <Heading level="h2" size="xlarge" align="center">Build your next Vue site with everyone on it</Heading>
+        <Paragraph size="large" align="center" width="620px">Designers, developers, learners and AI, in one editor, on real code.</Paragraph>
+        <Stack spread="center" gap="12px">
+          <Button href="https://studio.vueplay.com" size="large" color="#ffffff" textColor="#0b5e48">Start building, free</Button>
+          <Button href="/pricing" size="large" variant="outline" color="#ffffff">Pricing</Button>
+        </Stack>
+      </Backdrop>
+    </main>
+    <Footer></Footer>
+  </div>
 </template>
 <script>
-	import Text from '@vueplayio/text';
-	import Link from '@vueplayio/link';
-	import Home from '@/_templates/arctic/views/Home.vue';
-	import Title from '@vueplayio/title';
-	import Box from '@vueplayio/box';
-	import Footer from '@/components/Footer.vue';
-	import Header from '@/components/Header.vue';
-	export default {
-		components: {
-			Text: Text,
-			Link: Link,
-			Home: Home,
-			Title: Title,
-			Box: Box,
-			Footer: Footer,
-			Header: Header
-		},
-		inject: ['auth', 'manager'],
-		data: () => ({
-			usersCount: 0,
-			websitesCount: 0,
-			templatesCount: 0,
-			componentsCount: 0
-		}),
-		async mounted() {
-			if (!this.usersCount) await this.init();
-		},
-		async serverPrefetch() {
-			await this.init();
-		},
-		methods: {
-			async init() {
-				try {
-					const usersCount = (await this.auth.service('users')
-							.count({}))
-						?.count;
-					this.usersCount = usersCount || 0;
-					const websitesCount = (await this.manager.service('applications')
-							.count({
-								type: 'vue-app'
-							}))
-						?.count;
-					this.websitesCount = websitesCount || 0;
-					const templatesCount = (await this.manager.service('applications')
-							.count({
-								type: 'vue-template'
-							}))
-						?.count;
-					this.templatesCount = templatesCount || 0;
-					const componentsCount = (await this.manager.service('applications')
-							.count({
-								type: 'vue-sfc'
-							}))
-						?.count;
-					this.componentsCount = componentsCount || 0;
-				} catch (e) {
-					console.log('err', e);
-				}
-			},
-			formatCount(n) {
-				return n;
-				if (n >= 1000) {
-					return (n / 1000)
-						.toFixed(1)
-						.replace(/\.0$/, '') + 'K';
-				}
-				return n;
-			}
-		},
-		head() {
-			const title = "Vue Play - Build Visually, Create Anything";
-			const description = "Design, develop & launch websites, apps, components, and more with Vue Play. Rediscover the joy of building, from syntax to creativity.";
-			const url = "https://vueplay.com/";
-			const image = "https://vueplay.com/screenshot.png";
-			return {
-				title: title,
-				meta: [{
-					name: 'description',
-					content: description
-				}, {
-					property: 'og:title',
-					content: title
-				}, {
-					property: 'og:description',
-					content: description
-				}, {
-					property: 'og:type',
-					content: 'website'
-				}, {
-					property: 'og:url',
-					content: url
-				}, {
-					property: 'og:image',
-					content: image
-				}, {
-					name: 'twitter:card',
-					content: 'summary_large_image'
-				}, {
-					name: 'twitter:title',
-					content: title
-				}, {
-					name: 'twitter:description',
-					content: description
-				}, {
-					name: 'twitter:image',
-					content: image
-				}],
-				link: [{
-					rel: 'canonical',
-					href: url
-				}]
-			};
-		}
-	};
-
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import Backdrop from '@vueplayio/backdrop'
+import Heading from '@vueplayio/heading'
+import Paragraph from '@vueplayio/paragraph'
+import Stack from '@vueplayio/stack'
+import Button from '@vueplayio/button'
+import Section from '@vueplayio/section'
+import Columns from '@vueplayio/columns'
+import Stat from '@vueplayio/stat'
+import Card from '@vueplayio/card'
+import Feature from '@vueplayio/feature'
+import Marquee from '@vueplayio/marquee'
+import Image from '@vueplayio/image'
+import Accordion from '@vueplayio/accordion'
+import TiltCard from '@vueplayio/tilt-card'
+import FloatingShapes from '@vueplayio/floating-shapes'
+import { FEATURES } from '@/views/features/featureList.js'
+export default {
+  name: 'Home',
+  components: { Header, Footer, Backdrop, Heading, Paragraph, Stack, Button, Section, Columns, Stat, Card, Feature, Marquee, Image, Accordion, TiltCard, FloatingShapes },
+  data: () => ({ features: FEATURES }),
+  head() {
+    return {
+      title: 'Vue Play · One editor for everyone who builds with Vue',
+      meta: [
+        { name: 'description', content: 'A visual editor for Vue that makes a real Vue project with Git. Designers, developers and AI on the same code. 17 templates, free to start.' },
+        { property: 'og:title', content: 'Vue Play · One editor for everyone who builds with Vue' },
+        { property: 'og:description', content: 'A visual editor for Vue that makes a real Vue project with Git. Designers, developers and AI on the same code. 17 templates, free to start.' },
+        { property: 'og:image', content: 'https://vueplay.com/landing/studio-design.png' },
+        { property: 'og:url', content: 'https://vueplay.com/' },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+      link: [{ rel: 'canonical', href: 'https://vueplay.com/' }],
+      script: [{ type: 'application/ld+json', innerHTML: '{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Vue Play Studio","applicationCategory":"DeveloperApplication","operatingSystem":"Web browser","url":"https://studio.vueplay.com","description":"A visual editor for Vue whose output is a real Vue project with Git that you own and can export. Designers, developers and AI work on the same code.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Vue Play","url":"https://vueplay.com","logo":"https://vueplay.com/android-chrome-256x256.png"}}' }]
+    }
+  }
+}
 </script>
-<style scoped></style>
+<style>
+.vp-home {
+  --vp-primary: #10a37c;
+  --vp-primary-contrast: #ffffff;
+  --vp-background: #ffffff;
+  --vp-text: #0d1f1a;
+  --vp-muted: #55666f;
+  --vp-surface: #f2f7f5;
+  --vp-border: #dfe8e5;
+  --vp-radius: 12px;
+  --vp-width: 1180px;
+  --vp-font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--vp-background);
+  color: var(--vp-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* (the site's older Box component holds html, body and #app fixed to the window, so the page scrolls itself) */
+  flex: 1 1 auto;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.vp-home.dark {
+  --vp-primary: #2fd3a3;
+  --vp-primary-contrast: #04140f;
+  --vp-background: #0b1110;
+  --vp-text: #eef4f2;
+  --vp-muted: #9fb0ab;
+  --vp-surface: #121b19;
+  --vp-border: #24332f;
+}
+.vp-home main { display: block; }
+.vp-home main > .vp-section[id], .vp-home main > .vp-backdrop[id] { scroll-margin-top: 110px; }
+
+/* the small line over a heading */
+.vp-home .vp-home-eyebrow {
+  margin: 0;
+  color: var(--vp-primary);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* the end of the main heading in the brand's colours, a shine going slowly over it */
+.vp-home-grad {
+  background: linear-gradient(100deg, #0b8f6c 0%, #10a37c 20%, #00a6ff 45%, #17c8a8 70%, #10a37c 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: vp-home-shine 10s ease-in-out infinite alternate;
+}
+@keyframes vp-home-shine { to { background-position: 100% 0; } }
+@media (prefers-reduced-motion: reduce) { .vp-home-grad { animation: none; } }
+
+/* the cards that lead to the feature pages */
+.vp-home-inside { height: 100%; }
+.vp-home-inside__go { margin-top: auto; color: var(--vp-primary); font-weight: 600; text-decoration: none; }
+.vp-home-inside__go:hover { text-decoration: underline; }
+.vp-home-inside__go::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+.vp-home-eyebrow--light { color: #17e8c2 !important; }
+
+/* under the buttons: the Vue logo, and what is true of every plan */
+.vp-home-vue {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 10px;
+  margin: 0;
+  color: var(--vp-muted);
+  font-size: 14px;
+}
+.vp-home-vue__made {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 8px;
+  border: 1px solid color-mix(in srgb, #41b883 40%, var(--vp-border));
+  border-radius: 999px;
+  background: color-mix(in srgb, #41b883 8%, var(--vp-background));
+  color: var(--vp-text);
+  text-decoration: none;
+  transition: border-color 150ms ease;
+}
+.vp-home-vue__made:hover { border-color: #41b883; }
+.vp-home-vue__made b { color: #2f9e6e; }
+.vp-home-vue__logo { width: 20px; height: 18px; flex: none; }
+.vp-home-vue__dot { opacity: .5; }
+.dark .vp-home-vue__inner { fill: #c9d6e2; }
+.dark .vp-home-vue__made b { color: #41b883; }
+@media (max-width: 560px) { .vp-home-vue__dot { display: none; } .vp-home-vue > span:not(.vp-home-vue__dot) { width: 100%; text-align: center; } }
+
+/* the band with the Vue logo */
+.vp-home-vueband__in {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 22px 28px;
+  border: 1px solid color-mix(in srgb, #41b883 35%, var(--vp-border));
+  border-radius: 18px;
+  background: linear-gradient(100deg, color-mix(in srgb, #41b883 10%, var(--vp-background)), var(--vp-background) 70%);
+}
+.vp-home-vueband__logo { flex: none; width: 64px; height: 56px; }
+.vp-home-vueband__title { margin: 0 0 4px; font-family: var(--vp-font-heading); font-size: 1.25rem; font-weight: 800; color: var(--vp-text); }
+.vp-home-vueband__text { margin: 0; color: var(--vp-muted); line-height: 1.55; }
+.vp-home-vueband__link { flex: none; margin-left: auto; color: #2f9e6e; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.vp-home-vueband__link:hover { text-decoration: underline; }
+@media (max-width: 700px) {
+  .vp-home-vueband__in { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px; }
+  .vp-home-vueband__link { margin-left: 0; }
+}
+
+/* the pill over the main heading */
+.vp-home-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px 6px 6px;
+  border: 1px solid var(--vp-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--vp-background) 75%, transparent);
+  backdrop-filter: blur(6px);
+  color: var(--vp-text);
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.vp-home-pill:hover { border-color: var(--vp-primary); }
+.vp-home-pill__tag {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--vp-primary);
+  color: var(--vp-primary-contrast);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* a screenshot of the Studio in a window; until the picture is there, a sketch of the editor with the view's name */
+.vp-home-shot {
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--vp-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--vp-background);
+  box-shadow: 0 30px 60px -30px rgba(6, 40, 30, 0.35), 0 8px 20px -10px rgba(6, 40, 30, 0.15);
+  text-align: left;
+}
+.vp-home-shot--hero { max-width: 1120px; margin-top: 28px; }
+.vp-home-shot__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--vp-border);
+  background: var(--vp-surface);
+  font-size: 12px;
+  color: var(--vp-muted);
+}
+.vp-home-shot__bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--vp-border); }
+.vp-home-shot__bar span { margin-left: 10px; }
+.vp-home-shot__screen {
+  position: relative;
+  /* (the name in the middle of the page part, between the side panels: 18% at the left, 22% at the right) */
+  box-sizing: border-box;
+  padding: 0 22% 0 18%;
+  aspect-ratio: 1500 / 720;
+  display: grid;
+  place-items: center;
+  --bar: color-mix(in srgb, var(--vp-border) 80%, transparent);
+  --soft: color-mix(in srgb, var(--vp-primary) 14%, transparent);
+  background:
+    /* panels at the sides: rows of a list */
+    linear-gradient(var(--bar), var(--bar)) 2.5% 8% / 12% 2.4% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 2.5% 15% / 9% 2.4% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 2.5% 22% / 11% 2.4% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 2.5% 29% / 8% 2.4% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 97.5% 8% / 16% 2.4% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 97.5% 16% / 16% 6% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 97.5% 27% / 16% 6% no-repeat,
+    /* the page in the middle: a heading, a line, a button and three cards */
+    linear-gradient(var(--bar), var(--bar)) 47.1% 14% / 30% 5% no-repeat,
+    linear-gradient(var(--bar), var(--bar)) 47.4% 23% / 22% 2.4% no-repeat,
+    linear-gradient(var(--vp-primary), var(--vp-primary)) 47.8% 31% / 8% 4.5% no-repeat,
+    linear-gradient(var(--soft), var(--soft)) 26.2% 82% / 16% 26% no-repeat,
+    linear-gradient(var(--soft), var(--soft)) 47.6% 82% / 16% 26% no-repeat,
+    linear-gradient(var(--soft), var(--soft)) 69% 82% / 16% 26% no-repeat,
+    linear-gradient(var(--vp-surface), var(--vp-surface)) left top / 18% 100% no-repeat,
+    linear-gradient(var(--vp-surface), var(--vp-surface)) right top / 22% 100% no-repeat,
+    linear-gradient(var(--vp-border), var(--vp-border)) 18% 0 / 1px 100% no-repeat,
+    linear-gradient(var(--vp-border), var(--vp-border)) 78% 0 / 1px 100% no-repeat,
+    var(--vp-background);
+}
+.vp-home-shot__name {
+  padding: 8px 16px;
+  border: 1px dashed var(--vp-border);
+  border-radius: 999px;
+  color: var(--vp-muted);
+  font-size: 14px;
+  background: var(--vp-background);
+}
+.vp-home-shot__screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--shot) center top / cover no-repeat;
+}
+
+/* the templates in moving rows */
+.vp-home .vp-home-tile { width: 340px; }
+.vp-home .vp-home-tile .vp-image__img { border: 1px solid var(--vp-border); }
+.vp-home .vp-home-tile figcaption { margin-top: 10px; font-weight: 600; font-size: 15px; color: var(--vp-text); text-align: left; }
+@media (max-width: 600px) {
+  .vp-home .vp-home-tile { width: 250px; }
+  .vp-home-shot__name { display: none; }
+  .vp-home-pill { font-size: 13px; }
+}
+</style>

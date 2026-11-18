@@ -1,156 +1,95 @@
 <template>
-	<Home>
-		<template #header>
-			<Header style="position: sticky; top: 0px"></Header>
-		</template>
-		<template #default>
-			<Box
-				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
-				expand="true"
-			>
-				<Box
-					contain="{`default`:{`xs`:{`light`:true}}}"
-					column="{`default`:{`xs`:{`light`:true}}}"
-					paddingTop="{`default`:{`xs`:{`light`:`100px`}}}"
-					alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-				>
-					<Title
-						style="text-align:center;max-width:800px"
-						fontSize="{`default`:{`xs`:{`light`:`45px`},`sm`:{`light`:`60px`},`md`:{`light`:`70px`},`lg`:{`light`:`88px`}}}"
-						type="{`default`:{`xs`:{`light`:`h1`},`2xl`:{`light`:`h1`}}}"
-						lineHeight="{`default`:{`xs`:{`light`:`47px`},`sm`:{`light`:`67px`},`md`:{`light`:`72px`},`lg`:{`light`:`90px`}}}"
-						fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-					>Roadmap</Title>
-					<Title
-						style="text-align:center"
-						type="{`default`:{`xs`:{`light`:`h2`},`2xl`:{`light`:`h2`}}}"
-						fontSize="{`default`:{`xs`:{`light`:`16px`},`md`:{`light`:`18px`},`lg`:{`light`:`20px`}}}"
-						lineHeight="{`default`:{`xs`:{`light`:`25px`},`md`:{`light`:`28px`},`lg`:{`light`:`30px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`25px`}}}"
-						fontWeight="{`default`:{`xs`:{`light`:`325`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`50px`}}}"
-					>See what's next —
-						<br />upcoming ideas, features, and plans in motion.
-					</Title>
-					<main class="p-6 m-auto max-w-xl container">
-						<Box
-							class="shadow mb-6 rounded-lg bg-white p-6"
-							backgroundColor="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 3%, white)`,`dark`:`color-mix(in oklch, var(--color-neutral) 10%, black)`}}}"
-							column="{`default`:{`xs`:{`light`:true}}}"
-						>
-							<h3>🧭 Set Sail with Arctic</h3>
-							<Text
-								fontSize="{`default`:{`xs`:{`light`:`16px`}}}"
-								style="margin:0px;margin-top:10px;margin-bottom:10px"
-							>Our flagship template Arctic is evolving. We’re bringing fresh improvements, smarter design, and exciting new possibilities. This is only the start of a bigger journey.</Text>
-							<a
-								href="https://arctic.vueplay.com"
-								target="_blank"
-							>
-								<img
-									src="@/assets/flagship.png"
-									width="100"
-									height="100"
-									style="width:100%;height:250px;border-radius:11px;object-fit:cover"
-								/>
-							</a>
-						</Box>
-					</main>
-					<Link
-						title="Open release log"
-						backgroundColor="{`default`:{`xs`:{`light`:`var(--color-primary)`}},`hover`:{`xs`:{`light`:`color-mix(in oklch, var(--color-primary) 60%, white)`,`dark`:`color-mix(in oklch, var(--color-primary) 60%, black)`}}}"
-						padding="{`default`:{`xs`:{`light`:`12px 25px`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`50px`}}}"
-						color="{`default`:{`xs`:{`light`:`color-mix(in oklch, var(--color-neutral) 0%, white)`}}}"
-						borderRadius="{`default`:{`xs`:{`light`:`5px`}}}"
-						marginBottom="{`default`:{`xs`:{`light`:`150px`}}}"
-						style="position:unset"
-						route="/release-log"
-					>
-					</Link>
-				</Box>
-			</Box>
-		</template>
-		<template #footer>
-			<Footer></Footer>
-		</template>
-	</Home>
+	<Page>
+		<PageIntro eyebrow="Roadmap" title="Roadmap" text="See what's next: upcoming ideas, features, and plans in motion."></PageIntro>
+		<Section space="small" width="narrow" gap="32px">
+			<article class="vp-panel vp-roadmap">
+				<a class="vp-roadmap__picture" href="https://arctic.vueplay.com" target="_blank" rel="noopener">
+					<img src="@/assets/flagship.png" alt="The Arctic template" width="1200" height="500" loading="lazy" />
+				</a>
+				<div class="vp-roadmap__words">
+					<span class="vp-chip vp-chip--brand">In motion</span>
+					<h2>Set sail with Arctic</h2>
+					<p>Our flagship template Arctic is evolving. We’re bringing fresh improvements, smarter design, and exciting new possibilities. This is only the start of a bigger journey.</p>
+					<a class="vp-roadmap__link" href="https://arctic.vueplay.com" target="_blank" rel="noopener">Open Arctic</a>
+				</div>
+			</article>
+			<Stack spread="center" gap="12px">
+				<Button href="/release-log" variant="outline">Open the release log</Button>
+				<Button href="https://github.com/vueplayground/vueplay.com/discussions" variant="text" :newTab="true">Suggest an idea</Button>
+			</Stack>
+		</Section>
+	</Page>
 </template>
 <script>
-	import Text from '@vueplayio/text';
-	import Link from '@vueplayio/link';
-	import Home from '@/_templates/arctic/views/Home.vue';
-	import Title from '@vueplayio/title';
-	import Box from '@vueplayio/box';
-	import Footer from '@/components/Footer.vue';
-	import Header from '@/components/Header.vue';
+	import Page from '@/components/Page.vue';
+	import PageIntro from '@/components/PageIntro.vue';
+	import Section from '@vueplayio/section';
+	import Stack from '@vueplayio/stack';
+	import Button from '@vueplayio/button';
+	import { pageHead } from '@/components/head.js';
 	export default {
 		components: {
-			Text: Text,
-			Link: Link,
-			Home: Home,
-			Title: Title,
-			Box: Box,
-			Footer: Footer,
-			Header: Header
+			Page,
+			PageIntro,
+			Section,
+			Stack,
+			Button
 		},
-		data: () => ({}),
 		head() {
-			return {
-				title: 'Vue Play - Product Roadmap',
-				meta: [{
-					name: 'description',
-					content: 'Explore Vue Play’s product roadmap to see upcoming features, improvements, and our vision for future releases.'
-				}, {
-					property: 'og:title',
-					content: 'Vue Play - Product Roadmap'
-				}, {
-					property: 'og:description',
-					content: 'Explore Vue Play’s product roadmap to see upcoming features, improvements, and our vision for future releases.'
-				}, {
-					property: 'og:type',
-					content: 'website'
-				}, {
-					property: 'og:url',
-					content: 'https://vueplay.com/roadmap'
-				}, {
-					property: 'og:image',
-					content: 'https://vueplay.com/screenshot.png'
-				}, {
-					name: 'twitter:card',
-					content: 'summary_large_image'
-				}, {
-					name: 'twitter:title',
-					content: 'Vue Play - Product Roadmap'
-				}, {
-					name: 'twitter:description',
-					content: 'Explore Vue Play’s product roadmap to see upcoming features, improvements, and our vision for future releases.'
-				}, {
-					name: 'twitter:image',
-					content: 'https://vueplay.com/screenshot.png'
-				}],
-				link: [{
-					rel: 'canonical',
-					href: 'https://vueplay.com/roadmap'
-				}]
-			};
+			return pageHead({
+				title: 'Roadmap · Vue Play',
+				description: 'Explore the Vue Play roadmap to see upcoming features, improvements and our vision for future releases of the Studio and its templates.',
+				path: '/roadmap'
+			});
 		}
 	};
 
 </script>
-<style scoped>
-	h3 {
-		font-weight: bold;
+<style>
+	.vp-roadmap {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		padding: 0;
+		overflow: hidden;
 	}
 
-	ul {
-		display: inline-block;
-		margin-top: 20px;
-		margin-bottom: 20px;
+	.vp-roadmap__picture img {
+		display: block;
+		width: 100%;
+		height: 260px;
+		object-fit: cover;
 	}
 
-	li {
-		padding-bottom: 5px;
+	.vp-roadmap__words {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.6rem;
+		padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem);
+	}
+
+	.vp-roadmap__words h2 {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.3;
+	}
+
+	.vp-roadmap__words p {
+		margin: 0;
+		color: var(--vp-muted);
+		font-size: 1.0625rem;
+	}
+
+	.vp-roadmap__link {
+		color: var(--vp-primary);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.vp-roadmap__link:hover {
+		text-decoration: underline;
 	}
 
 </style>

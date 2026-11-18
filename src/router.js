@@ -122,181 +122,36 @@ const routes = [
     ]
   },
   {
+    // The Features section: nine product pages (src/views/features). The addresses of the older docs-style
+    // pages go to the page that now tells of the same thing, so links and search rankings carry over.
     path: '/features',
-    name: 'Features',
     children: [
-      {
-        path: '',
-        redirect: '/features/drop/components'
-      },
-      {
-        path: 'search-engine-optimalization',
-        name: 'SEO',
-        component: () => import('@/views/features/SEO.vue')
-      },
-      {
-        path: 'market',
-        component: () => import('@/views/features/Market.vue')
-      },
-      {
-        path: 'git',
-        component: () => import('@/views/features/Git.vue')
-      },
-      {
-        path: 'teams',
-        component: () => import('@/views/features/Teams.vue')
-      },
-      {
-        path: 'projects',
-        component: () => import('@/views/features/Projects.vue')
-      },
-      {
-        path: 'launch',
-        children: [
-          {
-            path: 'export',
-            component: () => import('@/views/features/launch/Export.vue')
-          },
-          {
-            path: 'deploy',
-            component: () => import('@/views/features/launch/Deploy.vue')
-          },
-          {
-            path: 'publish',
-            component: () => import('@/views/features/launch/Publish.vue')
-          }
-        ]
-      },
-      {
-        path: 'code',
-        children: [
-          {
-            path: 'general',
-            component: () => import('@/views/features/code/General.vue')
-          },
-          {
-            path: 'real-time',
-            component: () => import('@/views/features/code/RealTime.vue')
-          },
-          {
-            path: 'mockup',
-            component: () => import('@/views/features/code/Mockup.vue')
-          }
-        ]
-      },
-      {
-        path: 'templating',
-        children: [
-          {
-            path: 'views',
-            component: () => import('@/views/features/template/Views.vue')
-          },
-          {
-            path: 'components',
-            component: () => import('@/views/features/template/Components.vue')
-          },
-          {
-            path: 'routes',
-            component: () => import('@/views/features/template/Routes.vue')
-          },
-          {
-            path: 'color-palette',
-            component: () =>
-              import('@/views/features/template/ColorPalette.vue')
-          }
-        ]
-      },
-      {
-        path: 'transform',
-        children: [
-          {
-            path: 'position',
-            component: () => import('@/views/features/transform/Position.vue')
-          },
-          {
-            path: 'dimension',
-            component: () => import('@/views/features/transform/Dimension.vue')
-          },
-          {
-            path: 'rotation',
-            component: () => import('@/views/features/transform/Rotation.vue')
-          },
-          {
-            path: 'layout',
-            component: () => import('@/views/features/transform/Layout.vue')
-          },
-          {
-            path: 'text',
-            component: () => import('@/views/features/transform/Text.vue')
-          }
-        ]
-      },
-      {
-        path: 'control',
-        children: [
-          {
-            path: 'attributes',
-            component: () => import('@/views/features/control/Attributes.vue')
-          },
-          {
-            path: 'properties',
-            component: () => import('@/views/features/control/Properties.vue')
-          },
-          {
-            path: 'props',
-            redirect: '/features/control/properties'
-          },
-          {
-            path: 'styles',
-            component: () => import('@/views/features/control/Styles.vue')
-          },
-          {
-            path: 'tailwind',
-            component: () => import('@/views/features/control/Tailwind.vue')
-          },
-          {
-            path: 'dynamic',
-            component: () => import('@/views/features/control/Dynamic.vue')
-          },
-          {
-            path: 'content',
-            component: () => import('@/views/features/control/Content.vue')
-          },
-          {
-            path: 'keyframes',
-            component: () => import('@/views/features/control/Keyframes.vue')
-          },
-          {
-            path: 'breakpoints',
-            component: () => import('@/views/features/control/Breakpoints.vue')
-          },
-          {
-            path: 'darkmode',
-            component: () => import('@/views/features/control/Darkmode.vue')
-          }
-        ]
-      },
-      {
-        path: 'drop',
-        children: [
-          {
-            path: 'elements',
-            component: () => import('@/views/features/drop/Elements.vue')
-          },
-          {
-            path: 'components',
-            component: () => import('@/views/features/drop/Components.vue')
-          },
-          {
-            path: 'icons',
-            component: () => import('@/views/features/drop/Icons.vue')
-          },
-          {
-            path: 'sections',
-            component: () => import('@/views/features/drop/Sections.vue')
-          }
-        ]
-      }
+      { path: '', name: 'Features', component: () => import('@/views/features/Overview.vue') },
+      { path: 'views', component: () => import('@/views/features/Views.vue') },
+      { path: 'learn', component: () => import('@/views/features/Learn.vue') },
+      { path: 'design', component: () => import('@/views/features/Design.vue') },
+      { path: 'code', component: () => import('@/views/features/Code.vue') },
+      { path: 'ai', component: () => import('@/views/features/Ai.vue') },
+      { path: 'templates', component: () => import('@/views/features/Templates.vue') },
+      { path: 'publish', component: () => import('@/views/features/Publish.vue') },
+      { path: 'teams', component: () => import('@/views/features/Teams.vue') },
+      // the older addresses
+      { path: 'search-engine-optimalization', redirect: '/features/publish' },
+      { path: 'market', redirect: '/features/templates' },
+      { path: 'git', redirect: '/features/code' },
+      { path: 'projects', redirect: '/features/teams' },
+      { path: 'launch/:rest(.*)*', redirect: '/features/publish' },
+      { path: 'code/:rest(.+)', redirect: '/features/code' },
+      { path: 'templating/views', redirect: '/features/templates' },
+      { path: 'templating/components', redirect: '/features/templates' },
+      { path: 'templating/:rest(.*)*', redirect: '/features/design' },
+      { path: 'template/views', redirect: '/features/templates' },
+      { path: 'template/components', redirect: '/features/templates' },
+      { path: 'template/:rest(.*)*', redirect: '/features/design' },
+      { path: 'transform/:rest(.*)*', redirect: '/features/design' },
+      { path: 'control/:rest(.*)*', redirect: '/features/design' },
+      { path: 'drop/:rest(.*)*', redirect: '/features/design' },
+      { path: ':rest(.*)*', redirect: '/features' }
     ]
   },
   {

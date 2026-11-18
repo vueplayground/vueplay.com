@@ -1,51 +1,25 @@
 <template>
-	<Home>
-		<template #header="">
-			<Header style="position: sticky; top: 0px"></Header>
-		</template> <template #default="">
-			<Box
-				style="justify-content:center;padding:0px;min-height:calc(100vh - 60px)"
-				expand="{`default`:{`xs`:{`light`:true}}}"
-			>
-				<Box
-					contain="{`default`:{`xs`:{`light`:true}}}"
-					column="{`default`:{`xs`:{`light`:true}}}"
-					alignItems="{`default`:{`xs`:{`light`:`center`}}}"
-					justifyContent="{`default`:{`xs`:{`light`:`center`}}}"
-				>
-					<Title
-						style="text-align:center;max-width:800px"
-						fontSize="{`default`:{`xs`:{`light`:`45px`},`sm`:{`light`:`60px`},`md`:{`light`:`70px`},`lg`:{`light`:`88px`}}}"
-						type="{`default`:{`xs`:{`light`:`h1`},`2xl`:{`light`:`h1`}}}"
-						lineHeight="{`default`:{`xs`:{`light`:`47px`},`sm`:{`light`:`67px`},`md`:{`light`:`72px`},`lg`:{`light`:`96px`}}}"
-						fontWeight="{`default`:{`xs`:{`light`:`250`}}}"
-						marginTop="{`default`:{`xs`:{`light`:`-100px`}}}"
-					>Good bye 👋🏼</Title>
-				</Box>
-			</Box>
-		</template> <template #footer="">
-			<Footer></Footer>
-		</template>
-	</Home>
+	<Page>
+		<Section class="vp-intro" space="xlarge" align="center" height="half" gap="18px">
+			<Heading level="h1" size="xlarge" align="center">Good bye 👋🏼</Heading>
+			<Paragraph size="large" align="center" :muted="true">You are logged out. Taking you to the front page…</Paragraph>
+		</Section>
+	</Page>
 </template>
 <script>
-	import Text from '@vueplayio/text';
-	import Home from '@/_templates/arctic/views/Home.vue';
-	import Title from '@vueplayio/title';
-	import Box from '@vueplayio/box';
-	import Footer from '@/components/Footer.vue';
-	import Header from '@/components/Header.vue';
+	import Page from '@/components/Page.vue';
+	import Section from '@vueplayio/section';
+	import Heading from '@vueplayio/heading';
+	import Paragraph from '@vueplayio/paragraph';
+	import { privateHead } from '@/components/head.js';
 	export default {
 		components: {
-			Text: Text,
-			Home: Home,
-			Title: Title,
-			Box: Box,
-			Footer: Footer,
-			Header: Header
+			Page,
+			Section,
+			Heading,
+			Paragraph
 		},
 		inject: ['logout'],
-		data: () => ({}),
 		async mounted() {
 			try {
 				await this.logout();
@@ -55,8 +29,10 @@
 			} catch (e) {
 				console.log('err', e);
 			}
+		},
+		head() {
+			return privateHead('Logged out · Vue Play');
 		}
 	};
 
 </script>
-<style scoped></style>

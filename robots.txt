@@ -1,2 +1,13 @@
 User-agent: *
+Allow: /
+Disallow: /checkout
+Disallow: /profile
+Disallow: /tokens
+Disallow: /login
+Disallow: /logout
+Disallow: /authorize-signup
+Disallow: /signup/
+Disallow: /market/orders
+Disallow: /market/*/checkout
+
 Sitemap: https://vueplay.com/sitemap.xml
